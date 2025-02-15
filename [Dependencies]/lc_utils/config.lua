@@ -12,19 +12,19 @@ Config.locale = "en"							-- Set the file language [en/br/de/es/fr/no/fr/zh-cn/
 
 Config.format = {
 	['currency'] = 'USD',						-- This is the currency format, so that your currency symbol appears correctly [Examples: BRL, USD, EUR] (Currency codes: https://taxsummaries.pwc.com/glossary/currency-codes)
-	['location'] = 'en-US'						-- This is the location of your country, to format the decimal places according to your standard [Examples: pt-BR, en-US] (Language codes: http://www.lingoes.net/en/translator/langcode.htm)
+	['location'] = 'en-BD'						-- This is the location of your country, to format the decimal places according to your standard [Examples: pt-BR, en-US] (Language codes: http://www.lingoes.net/en/translator/langcode.htm)
 }
 
 -- Here, you can easily switch between the available script compatibilities.
 -- The "default" option will use the framework's default script
 -- ATTENTION: If you set it to "other," it's necessary to configure the script inside the custom_scripts folder in the respective file. See: https://docs.lixeirocharmoso.com/utils/adding_your_exports
 Config.custom_scripts_compatibility = {
-	['fuel'] = "default",						-- [ox_fuel|ps-fuel|sna-fuel|cdn-fuel|LegacyFuel|default|other] Fuel script Compatibility
-	['inventory'] = "default",					-- [ox_inventory|qs-inventory|ps-inventory|default|other] Inventory script Compatibility
+	['fuel'] = "cdn-fuel",						-- [ox_fuel|ps-fuel|sna-fuel|cdn-fuel|LegacyFuel|default|other] Fuel script Compatibility
+	['inventory'] = "ox_inventory",					-- [ox_inventory|qs-inventory|ps-inventory|default|other] Inventory script Compatibility
 	['keys'] = "default",						-- [qs-vehiclekeys|cd_garage|jaksam|wasabi_carlock|MrNewbVehicleKeys|default|other] Keys script Compatibility
-	['mdt'] = "default",						-- [ps-mdt|redutzu-mdt|default|other] MDT script Compatibility (to log weapon serial)
-	['target'] = "disabled",					-- [qb-target|ox_target|disabled|other] Target script Compatibility (disabled will use markers)
-	['notification'] = "default",				-- [okokNotify|qbcore|ox_lib|default|other] Notification script Compatibility
+	['mdt'] = "ps-mdt",						-- [ps-mdt|redutzu-mdt|default|other] MDT script Compatibility (to log weapon serial)
+	['target'] = "ox_target",					-- [qb-target|ox_target|disabled|other] Target script Compatibility (disabled will use markers)
+	['notification'] = "ox_lib",				-- [okokNotify|qbcore|ox_lib|default|other] Notification script Compatibility
 }
 
 Config.notification = {							-- (Only if notification is default)

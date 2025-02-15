@@ -292,8 +292,8 @@ function GetFuel(vehicle, plate) --This gets triggered just before you store you
     elseif GetResourceState('esx-sna-fuel') == 'started' then
         return exports['esx-sna-fuel'], GetFuel(vehicle)
 
-    elseif GetResourceState('ps-fuel') == 'started' then
-        return exports['ps-fuel']:GetFuel(vehicle)
+    elseif GetResourceState('cdn-fuel') == 'started' then
+        return exports['cdn-fuel']:GetFuel(vehicle)
 
     elseif GetResourceState('lj-fuel') == 'started' then
         return exports['lj-fuel']:GetFuel(vehicle)
@@ -322,8 +322,8 @@ function SetFuel(vehicle, plate, fuel_level) --This gets triggered after you spa
     elseif GetResourceState('esx-sna-fuel') == 'started' then
         exports['esx-sna-fuel']:SetFuel(vehicle, fuel_level)
 
-    elseif GetResourceState('ps-fuel') == 'started' then
-        exports['ps-fuel']:SetFuel(vehicle, fuel_level)
+    elseif GetResourceState('cdn-fuel') == 'started' then
+        exports['cdn-fuel']:SetFuel(vehicle, fuel_level)
 
     elseif GetResourceState('lj-fuel') == 'started' then
         exports['lj-fuel']:SetFuel(vehicle, fuel_level)

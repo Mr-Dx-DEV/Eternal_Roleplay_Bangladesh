@@ -1,0 +1,1 @@
+SteamApiKey = "598BC69C0F36C236B7042EB9FC643B79" --Steam api key for profile photos.

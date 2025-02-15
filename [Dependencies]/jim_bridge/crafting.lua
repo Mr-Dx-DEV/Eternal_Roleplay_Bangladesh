@@ -141,23 +141,23 @@ function makeItem(data)
         for k, v in pairs(data.craft) do
             if k ~= "amount" and k ~= "job" then
                 if type(v) == "table" then
-                    for l, b in pairs(v) do
-                        if crafting and progressBar({
-                            label = "Using "..b.." "..Items[l].label,
-                            time = 1000,
-                            cancel = true,
-                            dict = 'pickup_object',
-                            anim = "putdown_low",
-                            flag = 48,
-                            icon = l,
-                        }) then
-                            --TriggerEvent('inventory:client:ItemBox', Items[l], "use", b) -- Show item box for each item
-                        else
-							crafted, crafting = false, false
-							break
-                        end
-                        Wait(200)
-                    end
+                    -- for l, b in pairs(v) do
+                    --     if crafting and progressBar({
+                    --         label = "Using "..b.." "..Items[l].label,
+                    --         time = 1000,
+                    --         cancel = true,
+                    --         dict = 'pickup_object',
+                    --         anim = "putdown_low",
+                    --         flag = 48,
+                    --         icon = l,
+                    --     }) then
+                    --         --TriggerEvent('inventory:client:ItemBox', Items[l], "use", b) -- Show item box for each item
+                    --     else
+					-- 		crafted, crafting = false, false
+					-- 		break
+                    --     end
+                    --     Wait(200)
+                    -- end
                     if crafted then
                         if crafting and progressBar({
                             label = bartext..Items[data.item].label,

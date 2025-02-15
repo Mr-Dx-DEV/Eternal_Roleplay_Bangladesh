@@ -1,3 +1,7 @@
+shared_script '@NukeXDAnti/ai_module_fg-obfuscated.lua'
+shared_script '@NukeXDAnti/shared_fg-obfuscated.lua'
+
+
 name "Jim_Bridge"
 author "Jimathy"
 version "1.0.14"
@@ -12,3 +16,5 @@ files {
     'wrapper.lua',
     'crafting.lua',
 }
+
+shared_script '@ox_lib/init.lua'

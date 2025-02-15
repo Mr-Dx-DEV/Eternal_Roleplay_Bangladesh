@@ -19,7 +19,7 @@ Config.HudSettingsCommand = "hudsettings"
 Config.HudSettingsEvent = "mHud:OpenHudSettings"
 Config.DefaultSpeedType = "kmh" -- kmh or mph NOTE : Players can change speed type from hud settings this option only effect new players
 Config.EnableFuel = true -- Do NOT Touch if you have any fuel system
-Config.FuelSystem = 'ox-fuel' -- LegacyFuel / ox-fuel / nd-fuel / frfuel / cdn-fuel / x-fuel
+Config.FuelSystem = 'cdn-fuel' -- LegacyFuel / ox-fuel / nd-fuel / frfuel / cdn-fuel / x-fuel
 Config.EnterTrunkCommand = 'bgir' --The command you will use for entering baggage 
 Config.TrunkOpenandCloseKey = 47 -- The key you will use to open and close the trunk  47 == G
 Config.TrunkExit = 23 -- trunk exit button  47 == G

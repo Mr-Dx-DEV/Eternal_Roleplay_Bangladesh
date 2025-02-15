@@ -1091,12 +1091,15 @@ function hasJob(job, source, grade) local hasJob, duty = false, true
             end
 
         elseif GetResourceState(QBXExport):find("start") then
-            local jobinfo = exports[QBXExport]:GetPlayer(src).PlayerData.job
+            -- local jobinfo = exports[QBXExport]:GetPlayer(src).PlayerData.job
+            local jobinfo = exports.qbx_core:GetPlayer(src).PlayerData.job
             if jobinfo.name == job then hasJob = true
-                duty = exports[QBXExport]:GetPlayer(src).PlayerData.job.onduty
+                -- duty = exports[QBXExport]:GetPlayer(src).PlayerData.job.onduty
+                duty = exports.qbx_core:GetPlayer(src).PlayerData.job.onduty
                 if grade and not (grade <= jobinfo.grade.level) then hasJob = false end
             end
-            local ganginfo = exports[QBXExport]:GetPlayer(src).PlayerData.gang
+            -- local ganginfo = exports[QBXExport]:GetPlayer(src).PlayerData.gang
+            local ganginfo = exports.qbx_core:GetPlayer(src).PlayerData.gang
             if ganginfo.name == job then hasJob = true
                 if grade and not (grade <= ganginfo.grade.level) then hasJob = false end
             end

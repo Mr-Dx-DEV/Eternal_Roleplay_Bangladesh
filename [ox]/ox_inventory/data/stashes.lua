@@ -34,7 +34,7 @@ return {
 		slots = 70,
 		weight = 70000,
 		groups = shared.police
-	},vector4(-2362.43, 3243.11, 92.95, 335.62)
+	},
 	{
 		coords = vec3(301.3, -600.23, 43.28),
 		target = {
