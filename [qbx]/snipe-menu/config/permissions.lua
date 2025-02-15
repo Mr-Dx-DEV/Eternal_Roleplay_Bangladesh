@@ -34,7 +34,8 @@ Config.Permissions = {
     ["XY123456"] = "god", -- citizenid for qbcore
     ["char1:12334"] = "god", -- charid for ESX
 
-    ["discord:811436286006657025"] = "god",
+    ["discord:811436286006657025"] = "god",   --- Mr_Dx
+    ["discord:1134570924260196502"] = "god",    --- hanzo
     -- ["license:6d3b6254a50416697dcaa91878e2eb03d9112302"] = {"mod", "admin"}, -- the role god, admin or mod should be the key from Config.GodRoles which means the values that are added in square brackets.
     -- ["license:1234"] = "admin",
     -- ["license:1234"] = "mod",

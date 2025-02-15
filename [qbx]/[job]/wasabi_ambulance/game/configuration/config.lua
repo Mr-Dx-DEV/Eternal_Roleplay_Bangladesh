@@ -59,7 +59,7 @@ Config.CombatLogs = false -- Enable combat logs via Discord webhook? (Logs when 
 Config.LogIPs = false     -- If Config.DeathLogs/Config.ReviveLogs enabled, do you want to logs IP addresses as well?
 
 -- Stretcher Settings
-Config.EnableStretcher = true     -- Enable stretcher system?
+Config.EnableStretcher = false     -- Enable stretcher system?
 Config.StretcherProp = 'wasabi_stretcher'
 Config.StretcherKey = 38          -- Key to place the stretcher on the ground
 Config.HoldingStretcherOffSet = { -- Offset for holding stretcher
@@ -333,7 +333,7 @@ Config.CompleteDeath = { --DOES NOT APPLY TO QBCORE --  When enabled players can
 }
 
 Config.Bandages = {
-    enabled = false,       -- Useable bandages? (Leave false if ox_inventory because they're built in)
+    enabled = true,       -- Useable bandages? (Leave false if ox_inventory because they're built in)
     item = 'bandage',      -- YOU MUST ADD THIS ITEM TO YOUR ITEMS, IT DOES NOT COME IN INSTALLATION(COMES WITH QBCORE BY DEFAULT AS ITEM)
     hpRegen = 30,          -- Percentage of health it replenishes (30% by default)
     healBleed = false,     -- Heal bleed that is inflicted by injury system? (Requires injury system enabled)
@@ -435,8 +435,8 @@ Config.StandaloneCheckIns = {
 Config.Locations = {
     Pillbox = {
         RespawnPoint = { -- When player dies and bleeds out; they will revive at nearest hospital; Define the coords of this hospital here.
-            coords = vec3(317.8, -585.14, 44.2),
-            heading = 332.22,
+            coords = vec3(-466.59481811523, -282.77166748047, 35.835079193115),
+            heading = 203.40788269043,
             -- Even if you have useCheckInInstead to true, you must still define these coords for finding closest hospital
             -- If you want to use check-in instead of respawning at this location(Otherwise will just spawn at the coords above)
             useCheckInInstead = true
@@ -444,47 +444,47 @@ Config.Locations = {
 
         Blip = {
             Enabled = true,
-            Coords = vec3(324.15, -583.14, 44.20),
+            Coords = vec3(-448.384, -340.206, 34.502),
             Sprite = 61,
             Color = 2,
-            Scale = 0.4,
+            Scale = 0.5,
             String = 'Pillbox Hospital'
         },
 
         clockInAndOut = {
             enabled = true,                       -- Enable clocking in and out at a set location? (If using ESX you must have a off duty job for Config.ambulanceJob with same grades - example in main _install_first directory)
-            coords = vec3(334.75, -580.24, 43.28), -- Location of where to go on and off duty(If not using target)
+            coords = vec3(-430.08, -318.17, 34.91), -- Location of where to go on and off duty(If not using target)
             label = '[E] - Go On/Off Duty',        -- Text to display(If not using target)
             distance = 3.0,                        -- Distance to display text UI(If not using target)
             target = {
                 enabled = false,                   -- If enabled, the location and distance above will be obsolete
                 label = 'Go On/Off Duty',
-                coords = vec3(334.75, -580.24, 43.28),
-                heading = 337.07,
+                coords = vec3(-473.04, -1041.85, 24.29),
+                heading = 273.69,
                 width = 2.0,
                 length = 1.0,
-                minZ = 43.28 - 0.9,
-                maxZ = 43.28 + 0.9
+                minZ = 43.02 - 0.9,
+                maxZ = 43.38 + 0.9
             }
         },
         -- Personal Locker. Supports inventories: ox_inventory, qb-inventory, and qs-inventory
         -- Custom inventories can easily be added in wasabi_bridge/inventories/
         PersonalLocker = {
-            enabled = false,                        -- Enable personal locker(stash)
-            jobLock = 'ambulance',                  -- Job lock?
-            coords = vec(298.61, -598.28, 43.28),   -- Location of where to access personal locker (If target is disabled)
+            enabled = true,                        -- Enable personal locker(stash) 
+            jobLock = 'ambulance',                   -- Job lock?
+            coords = vec(-443.788, -309.222, 35.347),   -- Location of where to access personal locker (If target is disabled)
             label = '[E] - Access Personal Locker', -- Text to display(If not using target)
-            maxWeight = 5000,                       -- Total Weight of the personalLocker
+            maxWeight = 5000,                      -- Total Weight of the personalLocker
             slots = 30,                             -- Number of slots available in the Personal Locker
             distance = 2.0,                         -- Distance to display text UI(If not using target)
             target = {
                 enabled = false,                    -- If enabled, the location and distance above will be obsolete
                 label = 'Access Locker',
-                coords = vector3(283.27, -615.33, 43.38),
-                heading = 70.18,
+                coords = vector3(-470.19, -1042.95, 24.29),
+                heading = 19.03,
                 width = 2.0,
                 length = 1.0,
-                minZ = 43.38 - 0.9,
+                minZ = 43.02 - 0.9,
                 maxZ = 43.38 + 0.9
             }
         },
@@ -492,30 +492,30 @@ Config.Locations = {
 
         BossMenu = {
             Enabled = true,                        -- Enabled boss menu?
-            Coords = vec3(335.59, -594.33, 43.21), -- Location of boss menu (If not using target)
+            Coords = vec3(-504.44, -298.59, 42.32), -- Location of boss menu (If not using target)
             Label = '[E] - Access Boss Menu',      -- Text UI label string (If not using target)
             Distance = 2.5,                        -- Distance to allow access/prompt with text UI (If not using target)
             Target = {
                 enabled = false,                   -- Enable Target? (Can be customized in wasabi_bridge/customize/cl_customize.lua the target system)
                 label = 'Access Boss Menu',
-                coords = vec3(335.59, -594.33, 43.21),
-                heading = 269.85,
+                coords = vec3(-447.05, -1041.26, 33.69),
+                heading = 254.53,
                 width = 2.0,
                 length = 1.0,
-                minZ = 43.21 - 0.9,
-                maxZ = 43.21 + 0.9
+                minZ = 43.02 - 0.9,
+                maxZ = 43.38 + 0.9
             }
         },
 
         CheckIn = {                                      -- Hospital check-in
             Enabled = true,                              -- Enable ped and check-in area?
             Ped = 's_m_m_scientist_01',                  -- Check in ped
-            Coords = vec3(308.58, -595.31, 43.28 - 0.9), -- Coords of ped
-            Distance = 4.85,                             -- Distance to show textUI (If target is not enabled below)
-            Heading = 63.26,                             -- Heading of ped
-            Cost = 500,                                  -- Cost of using hospital check-in. Set to false for free
+            Coords = vec3(-435.28, -324.16, 34.91 - 0.9), -- Coords of ped
+            Distance = 3.85,                             -- Distance to show textUI (If target is not enabled below)
+            Heading = 165.1,                             -- Heading of ped
+            Cost = 2000,                                 -- Cost of using hospital check-in. Set to false for free
             Duration = 15 * seconds,                     -- Time it takes to spend in hospital bed
-            MaxOnDuty = 3,                               -- If this amount or less you can use, otherwise it will tell you that EMS is avaliable(Set to false to always enable check-in)
+            MaxOnDuty = 8,                               -- If this amount or less you can use, otherwise it will tell you that EMS is avaliable(Set to false to always enable check-in)
             PayAccount = 'bank',                         -- Account dead player pays from to check-in
             PayHospital = false,                         -- Payments made to check-in go to the company society/account? (ex. 'society_ambulance' for ESX and 'ambulance' for QBCore or false for no)
             Label = '[E] - Check In',                    -- label of text UI if target is not enabled below
@@ -523,19 +523,19 @@ Config.Locations = {
             Target = {
                 enabled = true,                          -- Enable Target? (Can be customized in wasabi_bridge/customize/cl_customize.lua the target system)
                 label = 'Check In',
-                coords = vec3(308.58, -595.31, 43.28),
-                heading = 63.26,
+                coords = vec3(-435.28, -324.16, 34.9),
+                heading = 165.1,
                 distance = 5.0,
                 width = 2.0,
                 length = 1.0,
-                minZ = 43.28 - 0.9,
-                maxZ = 43.28 + 0.9
+                minZ = 33.02 - 0.9,
+                maxZ = 33.98 + 0.9
             },
             DisableHospitalBeds = false,                                                       -- Disable hospital beds for check-in at this location?(Player will spend Duration checking in before respawning in RespawnNoBedLocation when set to true)
-            RespawnNoBedLocation = { coords = vec3(316.66, -581.3, 43.28), heading = 339.02 }, -- Coords and heading of where to spawn player if DisableHospitalBeds is set to true or beds are full
+            RespawnNoBedLocation = { coords = vec3(-466.59481811523, -282.77166748047, 35.835079193115), heading = 203.40788269043 }, -- Coords and heading of where to spawn player if DisableHospitalBeds is set to true or beds are full
             HospitalBeds = {
                 --              { coords = vec3(332.62, -587.17, 42.84+0.3), heading = 160.0 },
-                { coords = vec3(317.67, -585.37, 42.84 + 0.3), heading = 160.0 },
+               --[[  { coords = vec3(317.67, -585.37, 42.84 + 0.3), heading = 160.0 },
                 { coords = vec3(319.41, -581.04, 42.84 + 0.3), heading = 340.0 },
                 { coords = vec3(314.47, -584.2, 42.84 + 0.3),  heading = 160.0 },
                 { coords = vec3(313.93, -579.04, 42.84 + 0.3), heading = 340.0 },
@@ -545,7 +545,15 @@ Config.Locations = {
                 { coords = vec3(361.36, -581.3, 42.83 + 0.3),  heading = 250.0 },
                 { coords = vec3(359.54, -586.23, 42.84 + 0.3), heading = 250.0 },
                 { coords = vec3(354.44, -600.19, 42.85 + 0.3), heading = 250.0 },
-                { coords = vec3(324.26, -582.8, 42.84 + 0.3),  heading = 340.0 },
+                { coords = vec3(324.26, -582.8, 42.84 + 0.3),  heading = 340.0 }, ]]
+
+                { coords = vec3(-466.59481811523, -282.77166748047, 35.835079193115 + 0.1), heading = 203.40788269043 },
+                { coords = vec3(-463.66650390625, -289.8073425293, 35.833221435547 + 0.1), heading = 21.860538482666 },
+                { coords = vec3(-462.86395263672, -281.32543945313, 35.835048675537 + 0.1), heading = 199.94317626953 },
+                { coords = vec3(-460.22265625, -288.69342041016, 35.833206176758 + 0.1), heading = 36.001201629639 },
+                { coords = vec3(-466.67175292969, -282.68228149414, 35.835094451904 + 0.1), heading = 201.47679138184 },
+                
+                
                 -- Stock qb-ambulance hospital bed coords:
                 --                { coords = vec3(353.1, -584.6, 43.11), heading = 152.08 },
                 --                { coords = vec3(356.79, -585.86, 43.11), heading = 152.08 },
@@ -560,8 +568,8 @@ Config.Locations = {
         },
 
         Cloakroom = {
-            Enabled = true,
-            Coords = vec3(300.6, -597.7, 42.1), -- Coords of cloakroom
+            Enabled = false,
+            Coords = vec3(-443.101, -310.926, 34.911), -- Coords of cloakroom
             Label = '[E] - Change Clothes',     -- String of text ui of cloakroom
             HotKey = 38,                        -- Default: 38 (E)
             Range = 1.5,                        -- Range away from coords you can use.
@@ -648,11 +656,11 @@ Config.Locations = {
         MedicalSupplies = {                                                     -- EMS Shop for supplies
             Enabled = true,                                                     -- If set to false, rest of this table do not matter
             Ped = 's_m_m_doctor_01',                                            -- Ped to target
-            Coords = vec3(306.63, -601.44, 43.28 - 0.95),                       -- Coords of ped/target
-            Heading = 337.64,                                                   -- Heading of ped
+            Coords = vec3(-455.44, -311.03, 33.91),                       -- Coords of ped/target
+            Heading = 29.88,                                                   -- Heading of ped
             Supplies = {                                                        -- Supplies
                 { item = 'medbag',     label = 'Medical Bag',   price = 1000 }, -- Pretty self explanatory, price may be set to 'false' to make free
-                { item = 'medikit',    label = 'First-Aid Kit', price = 250 },
+                { item = 'sedative',    label = 'Sedative', price = 250 },
                 { item = 'morphine30', label = 'Morphine 30MG', price = 100 },
                 { item = 'morphine15', label = 'Morphine 15MG', price = 45 },
                 { item = 'perc30',     label = 'Percocet 30MG', price = 60 },
@@ -660,11 +668,24 @@ Config.Locations = {
                 { item = 'perc5',      label = 'Percocet 5MG',  price = 30 },
                 { item = 'vic10',      label = 'Vicodin 10MG',  price = 30 },
                 { item = 'vic5',       label = 'Vicodin 5MG',   price = 15 },
+
+                { item = 'gps_tracker',       label = 'GPS Tracker',   price = 15 },
+                { item = 'parachute',       label = 'Parachute',   price = 15 },
+                { item = 'diving_gear',       label = 'Diving Gear',   price = 15 },
+                { item = 'diving_fill',       label = 'Diving Tube',   price = 15 },
+                { item = 'WEAPON_FIREEXTINGUISHER',       label = 'Fire Extinguisher',   price = 15 },
+                { item = 'radio',       label = 'Radio',   price = 15 },
+
+                { item = 'handcuffs',       label = 'Handcuffs',   price = 15 },
+                { item = 'bobby_pin',       label = 'Uncuff Pin',   price = 15 },
+
+
+
             }
         },
 
         Vehicles = {                                   -- Vehicle Garage
-            Enabled = true,                            -- Enable? False if you have you're own way for medics to obtain vehicles.
+            Enabled = false,                            -- Enable? False if you have you're own way for medics to obtain vehicles.
             Zone = {
                 coords = vec3(298.54, -606.79, 43.27), -- Area to prompt vehicle garage
                 range = 5.5,                           -- Range it will prompt from coords above

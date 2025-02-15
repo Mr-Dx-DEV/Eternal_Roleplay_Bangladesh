@@ -1,3 +1,7 @@
+shared_script '@NukeXDAnti/ai_module_fg-obfuscated.lua'
+shared_script '@NukeXDAnti/shared_fg-obfuscated.lua'
+
+
 games {'gta5'}
 
 fx_version 'cerulean'

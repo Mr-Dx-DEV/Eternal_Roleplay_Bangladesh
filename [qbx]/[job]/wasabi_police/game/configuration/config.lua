@@ -474,19 +474,19 @@ Config.Locations = {
     LSPD = {
         blip = {
             enabled = true,
-            coords = vec3(428.23, -984.28, 29.76),
+            coords = vec3(441.22, -982.03, 30.69),
             sprite = 60,
             color = 29,
-            scale = 1.0,
-            string = 'Mission Row PD'
+            scale = 0.5,
+            string = 'Police Station'
         },
 
         clockInAndOut = {
-            enabled = false,                        -- Enable clocking in and out at a set location? (If using ESX you must have a off duty job for each e.x. offpolice for police offsheriff for sheriff AND have grades for each pd grade - QBCORE REQUIRES NOTHING)
+            enabled = true,                        -- Enable clocking in and out at a set location? (If using ESX you must have a off duty job for each e.x. offpolice for police offsheriff for sheriff AND have grades for each pd grade - QBCORE REQUIRES NOTHING)
             jobLock = 'police',                    -- This must be set to which job will be utilizing (ESX MUST HAVE OFF DUTY JOB / GRADES FOR THIS - ex. offpolice or offsheriff)
-            coords = vec3(441.32, -982.04, 30.69), -- Location of where to go on and off duty(If not using target)
+            coords = vec3(441.22, -982.03, 30.69), -- Location of where to go on and off duty(If not using target)
             label = '[E] - Go On/Off Duty',        -- Text to display(If not using target)
-            distance = 1.0,                        -- Distance to display text UI(If not using target)
+            distance = 0.5,                        -- Distance to display text UI(If not using target)
             target = {
                 enabled = false,                   -- If enabled, the location and distance above will be obsolete
                 label = 'Go On/Off Duty',

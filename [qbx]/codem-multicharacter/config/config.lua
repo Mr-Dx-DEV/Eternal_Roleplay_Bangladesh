@@ -4,7 +4,7 @@ Config.SQL               = "oxmysql" -- oxmysql, ghmattimysql, mysql-async
 Config.EnableCamShake    = true
 Config.HiddenCoords      = vector4(-812.23, 182.54, 76.74, 156.5)
 Config.Thema             = "red" -- orange , white , purple, blue, green , red
-Config.ServerLogo        = "https://r2.fivemanage.com/8Hb4twhFSbaNdR27bPGV4/m_logo.png"
+Config.ServerLogo        = "https://r2.fivemanage.com/w4aVvxe5Gx1fmKRNTBqw3/images/ERP_Log_new_2.png"
 Config.DeleteCharacter   = false
 Config.Clothes           = "codem-appearance" -- default, illenium-appearance, fivem-appearance default = codem-appearance
 Config.Inventory         = "ox_inventory" -- qb_inventory, esx_inventory, ox_inventory,  codem-inventory, qs_inventory 
