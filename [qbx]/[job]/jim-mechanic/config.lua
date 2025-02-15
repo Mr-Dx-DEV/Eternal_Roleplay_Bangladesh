@@ -62,7 +62,7 @@ Config = {
 	Harness = {
 		JobOnly = false,			-- Only allow job roles to add a Harness to vehicle
 		HarnessControl = true,		-- Enable harness AND seatbelt features of the script, requires edits to smallresources and hud scripts
-		seatbeltEasyLeave = true,	-- if true players can exit vehicled before removing seatbelt
+		seatbeltEasyLeave = false,	-- if true players can exit vehicled before removing seatbelt
 		harnessEasyLeave = true,	-- if true players can exit vehicled before removing harness
 
 		progOn = true,				-- if true add a progressBar to buckle harness
@@ -74,7 +74,7 @@ Config = {
 		timeOff = 2000,				-- Time for the progress bar to take off harness
 
 		minimumSpeed = 70,			-- Minimum speed for crash logic to be triggered
-		minimumSeatBeltSpeed = 110, -- Minimuim speed for ejecting with a seatbelt attached
+		minimumSeatBeltSpeed = 1100, -- Minimuim speed for ejecting with a seatbelt attached
 		minimumDamage = 15.0, 		-- Minimum body damage for ejecting a player (default 15 = .15%)
 
 		crashKill = false,			-- Set to true if you want ejecting when crashing to kill/injure
@@ -167,7 +167,7 @@ Config = {
 
 	Previews = {
 		oldOxLibMenu = true,		-- Enable this to use default context menu for previews when using ox_lib
-		PreviewPhone = true, 		-- Enable this is preview menu generates an email, False if you want to give an item
+		PreviewPhone = false, 		-- Enable this is preview menu generates an email, False if you want to give an item
 		PreviewJob = false, 		-- Enable this if you want /preview to require a Job Role
 		PreviewLocation = false, 	-- Enable this if you want to lock /preview to a job location (ignored if LocationRequired is false)
 
@@ -186,7 +186,7 @@ Config = {
 	},
 
 	StoreCraft = {
-		Crafting = true, 				-- Set true to turn on crafting features
+		Crafting = false, 				-- Set true to turn on crafting features
 		StashCraft = false,  			-- Set true to grab materials from mechaincs stash for crafting
 		Stores = true, 					-- Set true to turn on shop store features
 	},
@@ -196,13 +196,13 @@ Config = {
 
 		ShowToAll = true,					-- Show Odometer to passengers aswell as driver
 		ShowPassengersAllIcons = false, 	-- Enabling this will only show passengers the buckle/harness icon
-		OdoAlwaysShowIcons = true, 			-- Enable this to show the icons even when not damaged
+		OdoAlwaysShowIcons = false, 			-- Enable this to show the icons even when not damaged
 		OdoShowLimit = 70,					-- If OdoAlwaysShowIcons, the damage icons only will be shown if below this percent
 
 		SeatbeltHideWhenBuckled = false, 	-- Hide seatlbelt icon when buckled
 		HarnessHideWhenBuckled = false, 	-- Hide Harness icon when buckled
 
-		showSpeedometer = true,
+		showSpeedometer = false,
 
 		OdoIconsToShow = {
 			["engine"] = true,
