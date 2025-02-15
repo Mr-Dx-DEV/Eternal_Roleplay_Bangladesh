@@ -10,6 +10,12 @@ Config.JobOutfitsInteraction = {
         },
         {
             coords = {
+                vector3(-2358.12, 3254.86, 32.81)
+            },
+            allowedJobs = {"army"},
+        },
+        {
+            coords = {
                 vector3(300.26, -598.66, 43.28),
             },
             allowedJobs = {"ambulance"},

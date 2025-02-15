@@ -42,10 +42,10 @@ Config.QBOldJobMethod = false -- use the old method to check job in qb-core? thi
 
 Config.Item = {}
 -- If you want to set up multiple items & frame colours, see https://docs.lbscripts.com/phone/configuration/#multiple-items--colored-phones
-Config.Item.Require = false -- require a phone item to use the phone
+Config.Item.Require = true -- require a phone item to use the phone
 Config.Item.Name = "phone" -- name of the phone item
 
-Config.Item.Unique = false -- should each phone be unique? https://docs.lbscripts.com/phone/configuration/#unique-phones
+Config.Item.Unique = true -- should each phone be unique? https://docs.lbscripts.com/phone/configuration/#unique-phones
 Config.Item.Inventory = "auto" --[[
     The inventory you use, IGNORE IF YOU HAVE Config.Item.Unique DISABLED.
     Supported:
