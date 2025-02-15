@@ -59,7 +59,7 @@ const store = Vuex.createStore({
         modalValid: false,
 
         config: {
-            welcomeMessage: "Welcome to the M City !"
+            welcomeMessage: "Welcome to the Eternal Roleplay !"
         }
     },
     mutations: {},

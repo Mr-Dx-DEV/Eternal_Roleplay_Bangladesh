@@ -651,7 +651,7 @@ Config.market_types = {
 			['id'] = 52,						-- Blip ID [Set this value 0 to dont have blip]
 			['name'] = "Market",				-- Blip Name [Will be replaced when the owner rename the store]
 			['color'] = 4,						-- Blip Color
-			['scale'] = 0.6,					-- Blip Scale
+			['scale'] = 0.5,					-- Blip Scale
 		}
 	},
 
@@ -715,7 +715,7 @@ Config.market_types = {
 			['id'] = 110,
 			['name'] = "Ammunation",
 			['color'] = 4,
-			['scale'] = 0.6,
+			['scale'] = 0.5,
 		}
 	}
 }

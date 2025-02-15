@@ -142,7 +142,7 @@ Config.AmbulanceOffsets = {
 }
 
 Config.GPSBlips = {
-    enabled = false,      -- Enabled?
+    enabled = true,      -- Enabled?
     item = false,        -- Item required? Note: You have to use it then
     sprites = {
         none = 443,        -- Blip for when not in a vehicle
@@ -154,7 +154,7 @@ Config.GPSBlips = {
     },
     settings = {
         color = 1,
-        scale = 0.75,
+        scale = 0.5,
         short = false,
         category = 7
     }
@@ -447,7 +447,7 @@ Config.Locations = {
             Coords = vec3(324.15, -583.14, 44.20),
             Sprite = 61,
             Color = 2,
-            Scale = 1.0,
+            Scale = 0.4,
             String = 'Pillbox Hospital'
         },
 

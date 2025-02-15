@@ -166,7 +166,7 @@ Config.CCTVCameras = { -- CCTV Cameras
     },
     destoryable = true, -- Can players destroy CCTV Cameras?
     blip = {
-        enabled = true,      -- Enable blips for CCTV Cameras?
+        enabled = false,      -- Enable blips for CCTV Cameras?
         label = 'CCTV Camera', -- Blip label
         sprite = 604,         -- Blip sprite
         color = 5,            -- Blip color
@@ -407,7 +407,7 @@ Config.policeJobs = { -- Police jobs
 }
 
 Config.GPSBlips = {
-    enabled = false,     -- Enabled?
+    enabled = true,     -- Enabled?
     item = false,        -- Item required? Note: You have to use it then
     sprites = {
         none = 443,      -- Blip for when not in a vehicle
@@ -419,7 +419,7 @@ Config.GPSBlips = {
     },
     settings = {
         color = 3,
-        scale = 0.75,
+        scale = 0.5,
         short = false,
         category = 7
     }
@@ -477,7 +477,7 @@ Config.Locations = {
             coords = vec3(464.57, -992.0, 30.69),
             sprite = 60,
             color = 29,
-            scale = 1.0,
+            scale = 0.5,
             string = 'Mission Row PD'
         },
 
