@@ -69,11 +69,11 @@ Config.OldQBManagement = false -- If you use older qb-management(Unrelated to ES
 Config.AdvancedParking = false -- Delete vehicles with their exports(Script named advanced parking)
 
 Config.Jail = {
-    enabled = true,                          -- Enable jail feature?
+    enabled = false,                          -- Enable jail feature?
     input = true,                            -- Enable input? Some needs it
     jail = '',                               -- Current options: 'qb' (For qb-prison) / 'rcore' (For rcore-prison) / 'tk_jail' (For tk_jail) / 'hd_jail' (For hd_jail) / 'myPrison' (For myPrison) / 'qalle-jail' (For qalle-jail) / 'plouffe ' (For Plouffe Jail) / 'mx' (For mxJail) / 'custom' (For custom)
     BuiltInPrison = {
-        enabled = true,                      -- Enable built-in prison system?
+        enabled = false,                      -- Enable built-in prison system?
         persistentJail = true,               -- Persistent jail? (If false, jail will be reset on reload)
         coords = vec3(1845.0, 2585.0, 45.0), -- Coords of prison
         spawn = {
@@ -126,7 +126,7 @@ Config.Jail = {
 -- NOTE: If using qb-prison, you must make one small change to qb-prison.
 -- SEE https://docs.wasabiscripts.com/scripts/wasabi_police/customizations#qb-prison-integration
 
-Config.searchPlayers = false     -- Allow police jobs to search players for items (Must have inventory in bridge or one already supported in cl_customize.lua - or add your own!)
+Config.searchPlayers = true     -- Allow police jobs to search players for items (Must have inventory in bridge or one already supported in cl_customize.lua - or add your own!)
 Config.weaponsAsItems = true     -- (If you're unsure leave as true!)This is typically for older ESX and inventories that still use weapons as weapons and not items
 
 Config.spikeStripsEnabled = true -- Enable functionality of spike strips (Disable if you use difference script for spike strips)
@@ -360,7 +360,7 @@ Config.RadarPosts = {           -- Radar posts for speed detection
 }
 
 Config.GSR = {                 -- Gunshot residue settings
-    enabled = false,           -- Enabled?
+    enabled = true,           -- Enabled?
     cleanInWater = true,       -- Can clean GSR while in water?
     timeToClean = 5 * seconds, -- How long to clean GSR in water if enabled
     autoClean = 600,           -- (IN SECONDS)How long before residue clears itself? Set to false if undesired to auto clean GSR
@@ -374,14 +374,14 @@ Config.tackle = {
 }
 
 Config.seizeCash = {  -- ONLY FOR QBCORE WITHOUT CASH AS ITEM
-    enabled = false,  -- Enabled?
+    enabled = true,  -- Enabled?
     item = 'moneybag' -- Item to add after seizedCash
 }
 
 Config.handcuff = {                             -- Config in regards to cuffing
-    defaultCuff = 'hard',                       -- Default cuff type (Options: 'soft' / 'hard') Changing this will be the default hotkey cuff type
+    defaultCuff = 'soft',                       -- Default cuff type (Options: 'soft' / 'hard') Changing this will be the default hotkey cuff type
     persistentCuff = true,                      -- Verify player's cuffed status during login (Install '_EXTRA_ESX_INSTALL/ESX_PERSISTENT_CUFF.sql' if using ESX)
-    timer = 20 * minutes,                       -- Time before player is automatically unrestrained(Set to false if not desired)
+    timer = 30 * minutes,                       -- Time before player is automatically unrestrained(Set to false if not desired)
     hotkey = 'J',                               -- What key to press to handcuff people(Set to false for no hotkey)
     skilledEscape = {
         enabled = true,                         -- Allow criminal to simulate resisting by giving them a chance to break free from cuffs via skill check
@@ -401,9 +401,9 @@ Config.handcuff = {                             -- Config in regards to cuffing
 }
 
 Config.policeJobs = { -- Police jobs
-    'police',
+    'police'
     --    'sheriff'
-    'reporter'
+  --  'reporter'
 }
 
 Config.GPSBlips = {
@@ -474,19 +474,19 @@ Config.Locations = {
     LSPD = {
         blip = {
             enabled = true,
-            coords = vec3(464.57, -992.0, 30.69),
+            coords = vec3(428.23, -984.28, 29.76),
             sprite = 60,
             color = 29,
-            scale = 0.5,
+            scale = 1.0,
             string = 'Mission Row PD'
         },
 
         clockInAndOut = {
-            enabled = true,                        -- Enable clocking in and out at a set location? (If using ESX you must have a off duty job for each e.x. offpolice for police offsheriff for sheriff AND have grades for each pd grade - QBCORE REQUIRES NOTHING)
+            enabled = false,                        -- Enable clocking in and out at a set location? (If using ESX you must have a off duty job for each e.x. offpolice for police offsheriff for sheriff AND have grades for each pd grade - QBCORE REQUIRES NOTHING)
             jobLock = 'police',                    -- This must be set to which job will be utilizing (ESX MUST HAVE OFF DUTY JOB / GRADES FOR THIS - ex. offpolice or offsheriff)
-            coords = vec3(464.87, -977.37, 30.69), -- Location of where to go on and off duty(If not using target)
+            coords = vec3(441.32, -982.04, 30.69), -- Location of where to go on and off duty(If not using target)
             label = '[E] - Go On/Off Duty',        -- Text to display(If not using target)
-            distance = 3.0,                        -- Distance to display text UI(If not using target)
+            distance = 1.0,                        -- Distance to display text UI(If not using target)
             target = {
                 enabled = false,                   -- If enabled, the location and distance above will be obsolete
                 label = 'Go On/Off Duty',
@@ -501,7 +501,7 @@ Config.Locations = {
         },
 
         bossMenu = {
-            enabled = true,                        -- Enable boss menu?
+            enabled = false,                        -- Enable boss menu?
             jobLock = 'police',                    -- Lock to specific police job? Set to false if not desired
             coords = vec3(460.64, -985.64, 30.73), -- Location of boss menu (If not using target)
             label = '[E] - Access Boss Menu',      -- Text UI label string (If not using target)
@@ -520,7 +520,7 @@ Config.Locations = {
         },
 
         armoury = {
-            enabled = true,                                                                              -- Set to false if you don't want to use
+            enabled = false,                                                                              -- Set to false if you don't want to use
             coords = vec3(480.32, -996.67, 30.69 - 0.9),                                                 -- Coords of armoury
             heading = 86.95,                                                                             -- Heading of armoury NPC
             ped = 's_f_y_cop_01',                                                                        -- Ped model or false for no ped
@@ -560,7 +560,7 @@ Config.Locations = {
         },
 
         cloakroom = {
-            enabled = true,                        -- WILL NOT SHOW IN QBCORE INSTEAD USE QB-CLOTHING CONFIG! Set to false if you don't want to use (Compatible with esx_skin & wasabi fivem-appearance fork)
+            enabled = false,                        -- WILL NOT SHOW IN QBCORE INSTEAD USE QB-CLOTHING CONFIG! Set to false if you don't want to use (Compatible with esx_skin & wasabi fivem-appearance fork)
             jobLock = 'police',                    -- Allow only one of Config.policeJob listings / Set to false if allow all Config.policeJobs
             coords = vec3(462.36, -999.62, 30.69), -- Coords of cloakroom
             label = '[E] - Change Clothes',        -- String of text ui of cloakroom
@@ -688,8 +688,8 @@ Config.Locations = {
         personalLocker = {
             enabled = false,                       -- Enable personal locker for this station?
             jobLock = 'police',                    -- Job lock?
-            coords = vec3(462.64, -995.88, 30.69), -- Area to prompt personal locker
-            range = 2.0,                           -- Range it will prompt from coords above
+            coords = vec3(446.78, -996.89, 30.69), -- Area to prompt personal locker
+            range = 1.0,                           -- Range it will prompt from coords above
             label = '[E] - Access Personal Locker',
             target = {
                 enabled = false, -- If enabled, the location above will be obsolete
@@ -707,7 +707,7 @@ Config.Locations = {
         evidenceLocker = {
             enabled = false,                      -- Enable evidence locker for this station?
             jobLock = 'police',                   -- Job lock?
-            coords = vec3(472.5, -991.21, 26.27), -- Area to prompt personal locker
+            coords = vec3(474.81, -994.78, 26.27), -- Area to prompt personal locker
             range = 2.0,                          -- Range it will prompt from coords above
             label = '[E] - Access Evidence Locker',
             target = {
@@ -725,7 +725,7 @@ Config.Locations = {
 
 
         vehicles = {                                   -- Vehicle Garage
-            enabled = true,                            -- Enable? False if you have you're own way for medics to obtain vehicles.
+            enabled = false,                            -- Enable? False if you have you're own way for medics to obtain vehicles.
             jobLock = 'police',                        -- Job lock? or access to all police jobs by using false
             zone = {
                 coords = vec3(463.69, -1019.72, 28.1), -- Area to prompt vehicle garage
