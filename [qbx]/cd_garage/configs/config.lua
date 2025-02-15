@@ -403,7 +403,7 @@ Config.StaffPerms = {
 
 
 Config.InsideGarage = {
-    ENABLE = true, --Do you want to allow players to use the inside garage?
+    ENABLE = false, --Do you want to allow players to use the inside garage?
     only_showcars_inthisgarage = false, --Do you want the inside garage to only show the vehicles which are currently stored at that garage (eg., garage A).  (this works for inside garage only, even with this enabled all the cars will show in the outside UI).
     shell_z_axis = 30, --This is how low under the ground the garage shell will spawn, you could use math.random(10,50) to make it random each time so players dont see each other in their garage.
     shell_time_script = 'easytime', --Choose which time script you are using so we can set the time when you enter the shell. [ 'easytime' / 'vsync' / 'qbcore' / 'other' ].
@@ -638,17 +638,16 @@ Config.Locations = {
         Garage_ID = 'A', --The very first car garage's `garage_id` must be the same as the default value of the `garage_id` in the database as when a vehicle is purchased it gets sent to this garage. You can change the garage id's to what ever you like but make sure to also change the default garage_id in the database.
         Type = 'car', --The type of vehicles which use this garage. ('car'/'boat'/'air').
         Dist = 10, --The distance that you can use this garage.
-        x_1 = 215.09, y_1 = -805.17, z_1 = 30.81, --This is the location of the garage, where you press e to open for example.
+        x_1 = 225.21, y_1 = -786.78, z_1 = 30.73, --This is the location of the garage, where you press e to open for example.
         EventName1 = 'cd_garage:QuickChoose', --DONT CHANGE THIS.
         EventName2 = 'cd_garage:EnterGarage', --DONT CHANGE THIS.
         Name = UIText, --You dont need to change this.
-        x_2 = 212.42, y_2 = -798.77, z_2 = 30.88, h_2 = 336.61, --This is the location where the vehicle spawns.
+        x_2 = 225.21, y_2 = -786.78, z_2 = 30.73, h_2 = 154.06, --This is the location where the vehicle spawns.
         EnableBlip = true, --If disabled, this garage blip will not show on the map.
         JobRestricted = nil, --This will allow only players with certain jobs to use this. This is not a job garage, its still a normal garage. (SINGLE JOB EXAMPLE:  JobRestricted = {'police'},  MULTIPLE JOBS EXAMPLE:  JobRestricted = {'police', 'ambulance'}, )
         ShellType = '10cargarage_shell', --[ '10cargarage_shell' / '40cargarage_shell' / nil ] --You can choose the shell which is loaded when you enter the inside garage from this location. If you set it to nil the script will load a shell based on the amount of cars you own.
     },
 
-    
     {
         Garage_ID = 'B', --PINK MOTEL
         Type = 'car',
@@ -837,7 +836,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         spawnpoint = {x = 404.66, y = -1642.03, z = 29.29, h = 225.5}, --This is the location where the vehicle spawns.
         blip = {
             sprite = 357, --Icon of the blip.
-            scale = 0.5, --Size of the blip.
+            scale = 0.3, --Size of the blip.
             colour = 3, --Colour of the blip.
             name = L('car_city_impound'), --This can be changed in the Locales.
         }
@@ -849,7 +848,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         spawnpoint = {x = 1887.123, y = 3710.348, z = 31.92, h = 212.0},
         blip = {
             sprite = 357,
-            scale = 0.5,
+            scale = 0.3,
             colour = 3,
             name = L('car_sandy_impound'),
         }
@@ -861,7 +860,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         spawnpoint = {x = -848.4, y = -1362.8, z = -0.47, h = 113.0},
         blip = {
             sprite = 357,
-            scale = 0.5,
+            scale = 0.3,
             colour = 3,
             name = L('boat_impound'),
         }
@@ -873,7 +872,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         spawnpoint = {x = -960.22, y = -2934.4, z = 13.95, h = 153.0},
         blip = {
             sprite = 357,
-            scale = 0.5,
+            scale = 0.3,
             colour = 3,
             name = L('air_impound'),
         }

@@ -472,52 +472,28 @@ CreateThread(function()
     end
 end)
 
--- AddEventHandler('onResourceStop', function(resource)
---     while not Authorised do Wait(1000) end
---     if resource == GetCurrentResourceName() then
---         TriggerEvent('cd_drawtextui:HideUI')
---         if MyCars ~= nil then
---             for cd=1, #MyCars do
---                 if MyCars[cd] ~= nil then
---                     SetEntityAsNoLongerNeeded(MyCars[cd].vehicle)
---                     Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(vehicle))
---                     DeleteEntity(MyCars[cd].vehicle)
---                     DeleteVehicle(MyCars[cd].vehicle)
---                 end
---             end
---         end
---         SetNuiFocus(false, false)
---         SetNuiFocusKeepInput(false)
---         if shell and Config.InsideGarage.ENABLE then
---             DeleteGarage()
---         end
---     end
--- end)
 AddEventHandler('onResourceStop', function(resource)
     while not Authorised do Wait(1000) end
     if resource == GetCurrentResourceName() then
-        -- Hide UI using ox_lib
-        exports.ox_lib:hideTextUI()
-
+        TriggerEvent('cd_drawtextui:HideUI')
         if MyCars ~= nil then
             for cd=1, #MyCars do
                 if MyCars[cd] ~= nil then
                     SetEntityAsNoLongerNeeded(MyCars[cd].vehicle)
-                    Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(MyCars[cd].vehicle))
+                    Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(vehicle))
                     DeleteEntity(MyCars[cd].vehicle)
                     DeleteVehicle(MyCars[cd].vehicle)
                 end
             end
         end
-        
         SetNuiFocus(false, false)
         SetNuiFocusKeepInput(false)
-
         if shell and Config.InsideGarage.ENABLE then
             DeleteGarage()
         end
     end
 end)
+
 
 
 --███╗   ██╗ ██████╗ ████████╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗

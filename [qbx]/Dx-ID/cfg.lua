@@ -136,13 +136,13 @@ cfg.cards = {
         command = false, -- or 'showidcard' -- Shows the card in the information of the person using the command
         item = 'lawyerpass', -- or false
         useItemInfo = false,
-        cardBackground = 'card',
+        cardBackground = 'PD',
         title = 'Lawyer Pass',
         titleColor = 'orange',
         canShow = function(src)
             local player = QBCore.Functions.GetPlayer(src);
             if not player then return false end
-            return player.PlayerData.job.name == 'lawyer' and true or false
+            return player.PlayerData.job.name == 'doj' and true or false
         end,
         fields = {
             [1] = {
@@ -237,7 +237,42 @@ cfg.cards = {
             }
         }
     },
-   --[[  ['weaponlicense'] = {
+    ['VCorporationCard'] = {
+        command = false, -- or 'showidcard' -- Shows the card in the information of the person using the command
+        item = 'vcorporation_idcard', -- or false
+        useItemInfo = false,
+        cardBackground = 'card',
+        title = 'VCorporation LTD',
+        titleColor = 'orange',
+        canShow = function(src)
+            local player = QBCore.Functions.GetPlayer(src);
+            if not player then return false end
+            return player.PlayerData.job.name == 'vcorporation' and true or false
+        end,
+        fields = {
+            [1] = {
+                title = cfg.locales[cfg.locale]['name'],
+                editableFunctionName = 'getName',
+            },
+            [2] = {
+                title = cfg.locales[cfg.locale]['surname'],
+                editableFunctionName = 'getSurname',
+            },
+            [3] = {
+                title = cfg.locales[cfg.locale]['dob'],
+                editableFunctionName = 'getDOB',
+            },
+            [4] = {
+                title = cfg.locales[cfg.locale]['gender'],
+                editableFunctionName = 'getGender',
+            },
+            [5] = {
+                title = cfg.locales[cfg.locale]['signature'],
+                editableFunctionName = 'getSignature'
+            }
+        }
+    },
+    ['weaponlicense'] = {
         command = false, -- or 'showidcard' -- Shows the card in the information of the person using the command
         item = 'weaponlicense', -- or false
         useItemInfo = false,
@@ -271,7 +306,7 @@ cfg.cards = {
                 editableFunctionName = 'getSignature'
             }
         }
-    }, ]]
+    },
 }
 
 cfg.metadataKey = GetResourceState('ox_inventory') == 'started' and 'metadata' or 'info' -- 'info' for qb-inventory, 'metadata' for ox_inventory

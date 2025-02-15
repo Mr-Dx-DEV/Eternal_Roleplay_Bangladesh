@@ -42,7 +42,7 @@ Config.Surgery = {
         vector3(290.5751, -1443.4, 29.9665)
     },
     blip        = {
-        size = 0.7,
+        size = 0.3,
         type = 102,
         color = 51,
         label = "Surgery",
@@ -51,7 +51,7 @@ Config.Surgery = {
     marker      = {
         enable = true,
         type = 0,
-        size = 0.6,
+        size = 0.3,
         rgba = { 255, 0, 0, 255 }
     },
     drawText    = {
@@ -101,7 +101,7 @@ Config.Barber = {
         vector3(-278.1, 6228.5, 30.7)
     },
     blip        = {
-        size = 0.7,
+        size = 0.3,
         type = 71,
         color = 51,
         label = "Barber",
@@ -110,7 +110,7 @@ Config.Barber = {
     marker      = {
         enable = true,
         type = 0,
-        size = 0.6,
+        size = 0.3,
         rgba = { 255, 0, 0, 255 }
     },
     drawText    = {
@@ -151,7 +151,7 @@ Config.Tattoo = {
         vector3(-293.7, 6200.0, 31.4)
     },
     blip        = {
-        size = 0.7,
+        size = 0.3,
         type = 75,
         color = 1,
         label = "Tattoo Shop",
@@ -160,7 +160,7 @@ Config.Tattoo = {
     marker      = {
         enable = true,
         type = 0,
-        size = 0.6,
+        size = 0.3,
         rgba = { 255, 0, 0, 255 }
     },
     drawText    = {
@@ -265,7 +265,7 @@ Config.Clothing = {
         }
     },
     blip        = {
-        size = 0.7,
+        size = 0.3,
         type = 73,
         color = 47,
         label = "Clothing Shop",
@@ -274,7 +274,7 @@ Config.Clothing = {
     marker      = {
         enable = true,
         type = 0,
-        size = 0.6,
+        size = 0.3,
         rgba = { 255, 0, 0, 255 }
     },
     drawText    = {

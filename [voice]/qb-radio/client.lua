@@ -1,5 +1,5 @@
 local QBCore = exports['qb-core']:GetCoreObject()
-local PlayerData = QBCore.Functions.GetPlayerData() -- Just for resource restart (same as event handler)
+local PlayerData = QBCore.Functions.GetPlayerData()
 local radioMenu = false
 local onRadio = false
 local RadioChannel = 0
@@ -7,7 +7,7 @@ local RadioVolume = 50
 local hasRadio = false
 local radioProp = nil
 
---Function
+-- Function to load animation dictionary
 local function LoadAnimDic(dict)
     if not HasAnimDictLoaded(dict) then
         RequestAnimDict(dict)
@@ -17,17 +17,19 @@ local function LoadAnimDic(dict)
     end
 end
 
+-- Function to split a string by a separator
 local function SplitStr(inputstr, sep)
     if sep == nil then
         sep = "%s"
     end
     local t = {}
     for str in string.gmatch(inputstr, "([^" .. sep .. "]+)") do
-        t[#t+1] = str
+        t[#t + 1] = str
     end
     return t
 end
 
+-- Function to connect to a radio channel
 local function connecttoradio(channel)
     RadioChannel = channel
     local player = PlayerId()
@@ -40,18 +42,20 @@ local function connecttoradio(channel)
     exports["pma-voice"]:setRadioChannel(channel)
     TriggerServerEvent("qb-radio:server:addradiolist", channel)
     if SplitStr(tostring(channel), ".")[2] ~= nil and SplitStr(tostring(channel), ".")[2] ~= "" then
-        QBCore.Functions.Notify(Config.messages['joined_to_radio'] ..channel.. ' MHz', 'success')
+        QBCore.Functions.Notify(Config.messages['joined_to_radio'] .. channel .. ' MHz', 'success')
     else
-        QBCore.Functions.Notify(Config.messages['joined_to_radio'] ..channel.. '.00 MHz', 'success')
+        QBCore.Functions.Notify(Config.messages['joined_to_radio'] .. channel .. '.00 MHz', 'success')
     end
-    
-    TriggerServerEvent("qb-log:server:CreateLog", "radio", channel .." Radio Joined", "green", ""..GetPlayerName(GetPlayerFromServerId(GetPlayerServerId(PlayerId()))).. " Has Joined The Radio " .. channel)
+
+    TriggerServerEvent("qb-log:server:CreateLog", "radio", channel .. " Radio Joined", "green", "" .. GetPlayerName(GetPlayerFromServerId(GetPlayerServerId(PlayerId()))) .. " Has Joined The Radio " .. channel)
 end
 
+-- Function to close the radio event
 local function closeEvent()
-	TriggerEvent("InteractSound_CL:PlayOnOne","click",0.6)
+    TriggerEvent("InteractSound_CL:PlayOnOne", "click", 0.6)
 end
 
+-- Function to leave the radio
 local function leaveradio()
     closeEvent()
     local player = PlayerId()
@@ -60,97 +64,82 @@ local function leaveradio()
     onRadio = false
     exports["pma-voice"]:setRadioChannel(0)
     exports["pma-voice"]:setVoiceProperty("radioEnabled", false)
-    QBCore.Functions.Notify(Config.messages['you_leave'] , 'error')
+    QBCore.Functions.Notify(Config.messages['you_leave'], 'error')
     TriggerServerEvent("qb-radio:remove:removeradiolist")
-    TriggerServerEvent("qb-log:server:CreateLog", "radio", rchannel .." Radio Left", "red", ""..GetPlayerName(GetPlayerFromServerId(GetPlayerServerId(PlayerId()))).. " has Left The Radio " .. rchannel)
+    TriggerServerEvent("qb-log:server:CreateLog", "radio", rchannel .. " Radio Left", "red", "" .. GetPlayerName(GetPlayerFromServerId(GetPlayerServerId(PlayerId()))) .. " has Left The Radio " .. rchannel)
 end
 
+-- Function to toggle radio animation
 local function toggleRadioAnimation(pState)
-	LoadAnimDic("cellphone@")
-	if pState then
-		TriggerEvent("attachItemRadio","radio01")
-		TaskPlayAnim(PlayerPedId(), "cellphone@", "cellphone_text_read_base", 2.0, 3.0, -1, 49, 0, 0, 0, 0)
-		radioProp = CreateObject(`prop_cs_hand_radio`, 1.0, 1.0, 1.0, 1, 1, 0)
-		AttachEntityToEntity(radioProp, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 57005), 0.14, 0.01, -0.02, 110.0, 120.0, -15.0, 1, 0, 0, 0, 2, 1)
-	else
-		StopAnimTask(PlayerPedId(), "cellphone@", "cellphone_text_read_base", 1.0)
-		ClearPedTasks(PlayerPedId())
-		if radioProp ~= 0 then
-			DeleteObject(radioProp)
-			radioProp = 0
-		end
-	end
+    LoadAnimDic("cellphone@")
+    if pState then
+        TriggerEvent("attachItemRadio", "radio01")
+        TaskPlayAnim(PlayerPedId(), "cellphone@", "cellphone_text_read_base", 2.0, 3.0, -1, 49, 0, 0, 0, 0)
+        radioProp = CreateObject(`prop_cs_hand_radio`, 1.0, 1.0, 1.0, 1, 1, 0)
+        AttachEntityToEntity(radioProp, PlayerPedId(), GetPedBoneIndex(PlayerPedId(), 57005), 0.14, 0.01, -0.02, 110.0, 120.0, -15.0, 1, 0, 0, 0, 2, 1)
+    else
+        StopAnimTask(PlayerPedId(), "cellphone@", "cellphone_text_read_base", 1.0)
+        ClearPedTasks(PlayerPedId())
+        if radioProp ~= 0 then
+            DeleteObject(radioProp)
+            radioProp = 0
+        end
+    end
 end
 
+-- Function to toggle the radio
 local function toggleRadio(toggle)
     radioMenu = toggle
     SetNuiFocus(radioMenu, radioMenu)
     if radioMenu then
         toggleRadioAnimation(true)
-        SendNUIMessage({type = "open"})
+        SendNUIMessage({ type = "open" })
     else
         toggleRadioAnimation(false)
-        SendNUIMessage({type = "close"})
+        SendNUIMessage({ type = "close" })
     end
 end
 
+-- Function to check if the radio is on
 local function IsRadioOn()
     return onRadio
 end
 
-local function DoRadioCheck(PlayerItems)
+-- Function to check for the radio item in the player's inventory using ox_inventory
+local function DoRadioCheck()
     local _hasRadio = false
 
-    for _, item in pairs(PlayerItems) do
-        if item.name == "radio" then
-            _hasRadio = true
-            break;
-        end
+    if exports.ox_inventory:Search('count', 'radio') > 0 then
+        _hasRadio = true
     end
 
     hasRadio = _hasRadio
 end
 
---Exports
+-- Export to check if the radio is on
 exports("IsRadioOn", IsRadioOn)
 
---Events
--- list connected players
-
-RegisterNUICallback('getPlayers', function (_, cb)
-    QBCore.Functions.TriggerCallback('qb-radio:remove:getlist', function(playerlist)
-        if playerlist then
-            cb(playerlist)
-        else
-            cb(nil)
-        end
-    end, RadioChannel)
-end)
-
--- Handles state right when the player selects their character and location.
+-- Events to handle radio state changes
 RegisterNetEvent('QBCore:Client:OnPlayerLoaded', function()
     PlayerData = QBCore.Functions.GetPlayerData()
-    DoRadioCheck(PlayerData.items)
+    DoRadioCheck()
 end)
 
--- Resets state on logout, in case of character change.
 RegisterNetEvent('QBCore:Client:OnPlayerUnload', function()
-    DoRadioCheck({})
+    DoRadioCheck()
     PlayerData = {}
     leaveradio()
 end)
 
--- Handles state when PlayerData is changed. We're just looking for inventory updates.
 RegisterNetEvent('QBCore:Player:SetPlayerData', function(val)
     PlayerData = val
-    DoRadioCheck(PlayerData.items)
+    DoRadioCheck()
 end)
 
--- Handles state if resource is restarted live.
 AddEventHandler('onResourceStart', function(resource)
     if GetCurrentResourceName() == resource then
         PlayerData = QBCore.Functions.GetPlayerData()
-        DoRadioCheck(PlayerData.items)
+        DoRadioCheck()
     end
 end)
 
@@ -258,7 +247,7 @@ CreateThread(function()
     while true do
         Wait(1000)
         if LocalPlayer.state.isLoggedIn and onRadio then
-            if not hasRadio or PlayerData.metadata.isdead or PlayerData.metadata.inlaststand then
+            if not hasRadio or PlayerData.metadata.isdead or PlayerData.metadata.inlaststand or PlayerData.metadata["ishandcuffed"] then
                 if RadioChannel ~= 0 then
                     leaveradio()
                 end

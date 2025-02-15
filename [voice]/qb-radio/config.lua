@@ -3,45 +3,56 @@ Config = {}
 Config.RestrictedChannels = {
     [1] = {
         police = true,
+        bcso = true,
         ambulance = true
     },
     [2] = {
         police = true,
+        bcso = true,
         ambulance = true
     },
     [3] = {
         police = true,
+        bcso = true,
         ambulance = true
     },
     [4] = {
         police = true,
+        bcso = true,
         ambulance = true
     },
     [5] = {
         police = true,
+        bcso = true,
         ambulance = true
     },
     [6] = {
         police = true,
+        bcso = true,
         ambulance = true
     },
     [7] = {
-        mechanic = true
+        police = true,
+        bcso = true,
+        ambulance = true
     },
     [8] = {
-        tunershop =true
+        police = true,
+        bcso = true,
+        ambulance = true
     },
     [9] = {
-        reporter =true
+        urbanmechanic =true
+        
     },
     [10] = {
-        judge =true
+        urbanmechanic =true
     },
     [11] = {
-        lawyer =true
+        countymechanic =true
     },
     [12] = {
-        reporter =true
+        countymechanic =true
     },
     [13] = {
         tow =true
