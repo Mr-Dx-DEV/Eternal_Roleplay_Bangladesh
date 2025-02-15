@@ -87,7 +87,7 @@ Example Banner:
 
 # Exports and Documentation
 
-A partial archive of the original RP Emotes docs can be found [here](https://web.archive.org/web/20231218223552/https://docs.rpemotes.com/)
+Find our documentation [here](https://rpemotes-reborn.gitbook.io/guide)
 
 When using our emote menu with other scripts, using the `TriggerEvent('animations:client:EmoteCommandStart` won't do anything because the events do not exist. These have simply been replaced with the following exports:
 
@@ -447,6 +447,8 @@ Because the menu gets updated frequently, the files get overwritten. To avoid th
 
 Add your animation code to the `AnimationListCustom.lua` and make a backup of this file and call it `BackUpAnimationListCustom.lua`.
 
+**Note on vehicle emotes:** If you want your emote to play in a vehicle with the full body, you must add the FullBody tag to the emote options.
+
 **Note on animal emotes:** For the addition of custom emotes for animal peds, you must add use the `sdog` or `bdog` tags. For example if you want to add an emote of `laydownflat` it must be either `sdoglaydownflat` or `bdoglaydownflat`. You must also add any custom addon peds to the `animals.lua` file in either category for these animations to be played on those models.
 
 Whenever an update is released, rename `BackUpAnimationListCustom.lua` to `AnimationListCustom.lua`, click yes to overwrite, and you're good to go.
@@ -485,6 +487,7 @@ All animation creators have **_specifically_** asked that their content remain f
 - Crusopaul and Eki for discussing KVP and initializing it to the menu for persistent walk styles
 - [Amnilka](https://www.gta5-mods.com/users/frabi) for the Explicit Usage Rights Agreement to add free custom animations either publicly available or on their discord
 - [LittleSpoon](https://discord.gg/safeword) for the Explicit Usage Rights Agreement to add free custom animations either publicly available or on their discord
+- [LadyyShamrockk](https://www.gta5-mods.com/users/LadyyShamrockk) For allowing us to include their emotes in rpemotes-reborn
 - [Pupppy](https://discord.gg/rsN35X4s4N) for the Explicit Usage Rights Agreement to add free custom animations either publicly available or on their discord
 - [SapphireMods](https://discord.gg/Hf8F4nTyzt) for the Explicit Usage Rights Agreement to add free custom animations either publicly available or on their discord
 - [QueenSisters Animations](https://discord.gg/qbPtGwQuep) for the Explicit Usage Rights Agreement to add free custom animations either publicly available or on their discord

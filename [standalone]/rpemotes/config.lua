@@ -54,7 +54,7 @@ Config = {
     HoldToHandsUp = false, -- Hands-up action occurs only while holding the button down
 
     -- Pointing Options
-    PointingEnabled = false, -- You can disable the finger pointing here / change the keybind. It is currently set to B
+    PointingEnabled = true, -- You can disable the finger pointing here / change the keybind. It is currently set to B
     PointingKeybindEnabled = true,
     PointingKeybind = 'B', -- Get the button string here https://docs.fivem.net/docs/game-references/input-mapper-parameter-ids/keyboard/
     PointingKeybindInCarEnabled = false,
@@ -79,6 +79,8 @@ Config = {
     -- News Camera Options
     NewscamEnabled = false, -- If set to true, the /newscam command will be enabled.
 
+    NoIdleCam = true, -- Controls wether the idle cam can be disabled by players or not
+
     -- Preview Ped Options
     PreviewPed = true, -- Shows a preview of the emote on the player's ped next to the emote menu. Note that resmon will increase when this when emotes are being previewed.
 
@@ -86,17 +88,16 @@ Config = {
 }
 
 Config.KeybindKeys = {
-    --[[ 108, -- num4
+    108, -- num4
     110, -- num5
     109, -- num6
     117, -- num7
     111, -- num8
-    118 -- num9 ]]
+    118 -- num9
 }
 
 Config.Credits = {
-    {title = "<b>Thanks to the community<b>", subtitle = "For supporting and using RP Emotes!"},
-    {title = "Thanks <font color=\"#ff451d\">Galib Mahin 🫡</font>", subtitle = "<font color=\"#ff451d\">Galib Mahin 🌹</font> for assistance with adding animations."},
-    {title = "Thanks ~o~Mr Dx 🌹~s~", subtitle = "~o~DullPear~s~ for the Development ❤️"},
-    {title = "Thanks <b>RBN 🤖</b>", subtitle = "<b>RBN 🤖</b> for the launch the Server."},
+   
+    {title = "Thanks ~b~Mr_Dx 🧑‍💻~s~", subtitle = "~b~Mr_Dx~s~ for Develop Full Server ☺️."},
+   
 }

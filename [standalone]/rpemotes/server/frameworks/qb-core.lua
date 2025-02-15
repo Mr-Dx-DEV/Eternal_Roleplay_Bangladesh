@@ -11,13 +11,13 @@ end
 local QBCore = exports['qb-core']:GetCoreObject()
 
 -- https://github.com/qbcore-framework/dpemotes/blob/master/Server/Server.lua#L101-L141
---[[ QBCore.Commands.Add('e', 'Play an emote', {{ name="emotename", help="dance, camera, sit or any valid emote."}}, true, function(source, args)
+QBCore.Commands.Add('e', 'Play an emote', {{ name="emotename", help="dance, camera, sit or any valid emote."}}, true, function(source, args)
     TriggerClientEvent('animations:client:PlayEmote', source, args)
 end)
 
 QBCore.Commands.Add('emote', 'Play an emote', {{ name="emotename", help="dance, camera, sit or any valid emote."}}, true, function(source, args)
     TriggerClientEvent('animations:client:PlayEmote', source, args)
-end) ]]
+end)
 
 if Config.SqlKeybinding then
     QBCore.Commands.Add('emotebind', 'Bind an emote', {{ name="key", help="num4, num5, num6, num7. num8, num9. Numpad 4-9!"}, { name="emotename", help="dance, camera, sit or any valid emote."}}, true, function(source, args)
@@ -29,7 +29,7 @@ if Config.SqlKeybinding then
     end)
 end
 
---[[ QBCore.Commands.Add('emotemenu', 'Open rpemotes menu (F3) by default.', {}, false, function(source)
+QBCore.Commands.Add('emotemenu', 'Open rpemotes menu (F3) by default.', {}, false, function(source)
     TriggerClientEvent('animations:client:EmoteMenu', source)
 end)
 
@@ -51,4 +51,4 @@ end)
 
 QBCore.Commands.Add('nearby', 'Share emote with a nearby player.', {{ name="emotename", help="hug, handshake, bro or any valid shared emote."}}, true, function(source, args)
     TriggerClientEvent('animations:client:Nearby', source, args)
-end) ]]
+end)
