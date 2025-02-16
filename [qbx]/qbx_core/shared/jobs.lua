@@ -19,26 +19,62 @@ return {
         offDutyPay = false,
         grades = {
             [0] = {
-                name = 'Recruit',
-                payment = 50
+                name = 'Constable of Police',
+                payment = 400
             },
             [1] = {
-                name = 'Officer',
-                payment = 75
+                name = 'Nayek of Police',
+                payment = 450
             },
             [2] = {
-                name = 'Sergeant',
-                payment = 100
+                name = 'Assistant Sub-Inspector of Police',
+                payment = 500
             },
             [3] = {
-                name = 'Lieutenant',
-                payment = 125
+                name = 'Sergeant of Police',
+                payment = 550
             },
             [4] = {
-                name = 'Chief',
+                name = 'Sub-Inspector of Police',
+                payment = 600
+            },
+ 	        [5] = {
+                name = 'Inspector of Police',
+                payment = 650
+            },
+            [6] = {
+                name = 'Assistant Superintendent of Police',
+                payment = 700
+            },
+            [7] = {
+                name = 'Senior Assistant Superintendent of Police',
+                payment = 750
+            },
+            [8] = {
+                name = 'Additional Superintendent of Police',
+                payment = 800
+            },
+            [9] = {
+                name = 'Superintendent of Police',
+                payment = 850
+            },
+	        [10] = {
+                name = 'Additional Deputy Inspector General of Police',
+                payment = 900
+            },
+	        [11] = {
+                name = 'Deputy Inspector General of Police',
+                payment = 950 
+            },
+	        [12] = {
+                name = 'Additional Inspector Genaral of Police',
+                payment = 1000
+            },
+	        [13] = {
+                name = 'Inspector General of Police',
                 isboss = true,
                 bankAuth = true,
-                payment = 150
+                payment = 1200
             },
         },
     },
@@ -49,26 +85,52 @@ return {
         offDutyPay = false,
         grades = {
             [0] = {
-                name = 'Recruit',
-                payment = 50
+                name = 'Soldier',
+                payment = 500
             },
             [1] = {
-                name = 'Officer',
-                payment = 75
+                name = 'Corporal',
+                payment = 600
             },
             [2] = {
                 name = 'Sergeant',
-                payment = 100
+                payment = 700
             },
             [3] = {
-                name = 'Lieutenant',
-                payment = 125
+                name = 'Senior Warrant Officer',
+                payment = 800
             },
             [4] = {
-                name = 'Chief',
+                name = 'Lieutenant',
+                payment = 900
+            },
+            [5] = {
+                name = 'Captain',
+                payment = 1000
+            },
+            [6] = {
+                name = 'Major',
+                payment = 1100
+            },
+            [7] = {
+                name = 'Colonel',
+                payment = 1200
+            },
+            [8] = {
+                name = 'Brigadier General',
+                payment = 1300
+            },
+            [9] = {
+                name = 'Major General',
                 isboss = true,
                 bankAuth = true,
-                payment = 150
+                payment = 1400
+            },
+            [10] = {
+                name = 'General',
+                isboss = true,
+                bankAuth = true,
+                payment = 2000
             },
         },
     },
