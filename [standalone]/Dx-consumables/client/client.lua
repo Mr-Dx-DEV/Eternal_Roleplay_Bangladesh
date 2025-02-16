@@ -47,12 +47,15 @@ RegisterNetEvent('jim-consumables:Consume', function(itemName)
     local RewardItem = Consumables[itemName].rewards or nil
 	local time = Consumables[itemName].time or math.random(5000, 6000)
 	local type = Consumables[itemName].type or ""
+    local plushies = Consumables[itemName].plushies or 0
+    local itemChance = Consumables[itemName].itemChance or 0
 	local stress = Consumables[itemName].stress or 0
 	local heal = Consumables[itemName].heal or 0
 	local armor = Consumables[itemName].armor or 0
     local stats = Consumables[itemName].stats or nil
     local string = "Using "
     local canRun = Consumables[itemName].canRun
+    local disableWalk = Consumables[itemName].disableWalk
     if emote.AnimationOptions.Prop then
 		model = emote.AnimationOptions.Prop
 		bone = GetPedBoneIndex(Player, emote.AnimationOptions.PropBone)
@@ -99,10 +102,10 @@ RegisterNetEvent('jim-consumables:Consume', function(itemName)
         if Config.ProgressBar == "ox" then
             CreateThread(function() if exports.ox_lib:progressBar({ duration = time, label = string..QBCore.Shared.Items[itemName].label.."..", useWhileDead = false, canCancel = false,}) then consuming = false else end end)
         else
-            CreateThread(function() QBCore.Functions.Progressbar('jimmy_consume_', string..QBCore.Shared.Items[itemName].label.."..", time, false, false, {disableMovement = false, disableCarMovement = false, disableMouse = false, disableCombat = true,}, {}, {}, {}, function() consuming = false end, function() end, itemName) end)
+            CreateThread(function() QBCore.Functions.Progressbar('jimmy_consume_', string..exports.ox_inventory:Items()[itemName].label.."..", time, false, true, {disableMovement = disableWalk, disableCarMovement = false, disableMouse = false, disableCombat = true,}, {}, {}, {}, function() consuming = false end, function() cancelled = true end, itemName) end)
         end
     else
-        triggerNotify(nil, string..QBCore.Shared.Items[itemName].label.."..", "success")
+        triggerNotify(nil, string..exports.ox_inventory:Items()[itemName].label.."..", "success")
     end
 
 	consuming = true
@@ -176,6 +179,20 @@ RegisterNetEvent('jim-consumables:Consume', function(itemName)
             if Config.Debug then print("^5Debug^7: ^3Consume^7: ^2Reliving ^6"..stress.." ^2stress^7.") end
             TriggerServerEvent('hud:server:RelieveStress', stress)
         end
+
+        if plushies and plushies ~= 0 then
+            local receiveChance = math.random(1,100)
+            --print("^5Debug^7: ^2Your Chance^7: ^6"..receiveChance.."^7")
+            --print("^5Debug^7: ^2Chance to Receive%^7: ^6"..itemChance.."^7")
+            if receiveChance <= itemChance then
+                -- give item here
+                local plushies = {"uwu_mysterybox"}
+                local randomPlush = math.random(#plushies)
+                local chosenPlush = plushies[randomPlush]
+                TriggerServerEvent("jim-consumables:server:addNeed", 1, "item", chosenPlush)
+            end
+        end
+
 		if heal and heal ~= 0 then
             if Config.Debug then print("^5Debug^7: ^3Consume^7: ^2Healing player by^7: ^6"..heal) end
             SetEntityHealth(Player, GetEntityHealth(Player) + heal)

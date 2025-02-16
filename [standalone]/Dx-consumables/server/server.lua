@@ -5,7 +5,7 @@ local Emotes = Config.Emotes
 
 for k, v in pairs(Config.Consumables) do
 	QBCore.Functions.CreateUseableItem(k, function(source, item) TriggerClientEvent('jim-consumables:Consume', source, item.name) end)
-	if not QBCore.Shared.Items[k] then print("^1Debug^7: ^2Item check ^7- '^1"..k.."^7' ^2not found in the shared lua^7") end
+	if not exports.ox_inventory:Items()[k] then print("^1Debug^7: ^2Item check ^7- '^1"..k.."^7' ^2not found in the shared lua^7") end
 	if not Config.Emotes[v.emote] then print("^1Debug^7: ^2Emote check ^7- '^1"..k.."^7' ^2requested emote ^7'^6"..v.emote.."^7' - ^2not found in config^7.^2lua^7") end
 end
 
@@ -44,7 +44,7 @@ RegisterNetEvent('jim-consumables:server:toggleItem', function(give, item, amoun
 	end
 end)
 
-RegisterNetEvent('jim-consumables:server:addNeed', function(amount, type)
+RegisterNetEvent('jim-consumables:server:addNeed', function(amount, type, item)
     local Player = QBCore.Functions.GetPlayer(source) if not Player then return end
 	if type == "thirst" then
 		Player.Functions.SetMetaData('thirst', amount)
@@ -52,6 +52,10 @@ RegisterNetEvent('jim-consumables:server:addNeed', function(amount, type)
 	elseif type == "hunger" then
 		Player.Functions.SetMetaData('hunger', amount)
 		TriggerClientEvent('hud:client:UpdateNeeds', source, amount, Player.PlayerData.metadata.thirst)
+	end
+	if type == "item" then
+		Player.Functions.AddItem(item, amount, false)
+		TriggerClientEvent('inventory:client:ItemBox', source, QBCore.Shared.Items[item], "add")
 	end
 end)
 
