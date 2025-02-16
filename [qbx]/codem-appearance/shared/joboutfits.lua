@@ -4,31 +4,31 @@ Config.JobOutfitsInteraction = {
     data = {
         {
             coords = {
-                vector3(438.0425, -991.7719, 29.68959)
+                vector3(461.11, -998.73, 30.69),
             },
             allowedJobs = {"police"},
         },
         {
             coords = {
-                vector3(-2358.12, 3254.86, 32.81)
+                vector3(-2358.12, 3254.86, 32.81),
             },
             allowedJobs = {"army"},
         },
         {
             coords = {
-                vector3(300.26, -598.66, 43.28),
+                vector3(-437.75, -308.44, 34.91),
             },
             allowedJobs = {"ambulance"},
         },
+		-- {
+        --     coords = {
+        --         vector3(-256.76, 6326.86, 32.41),
+        --     },
+        --     allowedJobs = {"ambulance"},
+        -- },
 		{
             coords = {
-                vector3(-256.76, 6326.86, 32.41),
-            },
-            allowedJobs = {"ambulance"},
-        },
-		{
-            coords = {
-                vector3(-341.31, -162.09, 44.57),
+                vector3(-344.54, -124.56, 42.04),
             },
             allowedJobs = {"mechanic"},
         }
