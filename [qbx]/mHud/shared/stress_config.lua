@@ -139,7 +139,7 @@ Config.RemoveStress = {
 Config.AddStress = {
     ["shoot"] = {
         min = 1, -- minimum amount to add stress
-        max = 3, -- maximum amount to add stress
+        max = 1, -- maximum amount to add stress
         enable = true,
         func = function()
             CreateThread(function()            

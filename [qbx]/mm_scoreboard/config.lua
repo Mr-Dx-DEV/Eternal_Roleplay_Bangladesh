@@ -29,7 +29,7 @@ Config.Cooldown = 0 -- do not change
 
 
 Config.PlayerIdentifier = { -- configure what you want to show in playerlist [name(steam name), steam2(steam 2 dec), steam3(steam 3 hex), license(r* license), discord(discord user id), fivem(fivem user id)]
-    header = 'steam2', -- name/steam2/steam3/license/discord/fivem (header is the main identifier)
+    header = 'discord', -- name/steam2/steam3/license/discord/fivem (header is the main identifier)
     list = { -- name/steam2/steam3/license/discord/fivem (list is the sublist of identifiers)
         'name',
         'steam3',
@@ -39,7 +39,7 @@ Config.PlayerIdentifier = { -- configure what you want to show in playerlist [na
 }
 
 Config.RecentIdentifier = { -- configure what you want to show in recent dc list [name(steam name), steam2(steam 2 dec), steam3(steam 3 hex), license(r* license), discord(discord user id), fivem(fivem user id)]
-    header = 'steam2', -- name/steam2/steam3/license/discord/fivem (header is the main identifier)
+    header = 'discord', -- name/steam2/steam3/license/discord/fivem (header is the main identifier)
     list = { -- name/steam2/steam3/license/discord/fivem (list is the sublist of identifiers)
         'name',
         'steam3',

@@ -637,7 +637,7 @@ Config.Locations = {
     {
         Garage_ID = 'A', --The very first car garage's `garage_id` must be the same as the default value of the `garage_id` in the database as when a vehicle is purchased it gets sent to this garage. You can change the garage id's to what ever you like but make sure to also change the default garage_id in the database.
         Type = 'car', --The type of vehicles which use this garage. ('car'/'boat'/'air').
-        Dist = 10, --The distance that you can use this garage.
+        Dist = 15, --The distance that you can use this garage.
         x_1 = 225.21, y_1 = -786.78, z_1 = 30.73, --This is the location of the garage, where you press e to open for example.
         EventName1 = 'cd_garage:QuickChoose', --DONT CHANGE THIS.
         EventName2 = 'cd_garage:EnterGarage', --DONT CHANGE THIS.

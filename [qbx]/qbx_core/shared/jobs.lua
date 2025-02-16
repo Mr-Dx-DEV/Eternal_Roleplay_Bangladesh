@@ -201,26 +201,48 @@ return {
         offDutyPay = false,
         grades = {
             [0] = {
-                name = 'Recruit',
-                payment = 50
+                name = 'Intern Doctor',
+                payment = 700
             },
             [1] = {
-                name = 'Paramedic',
-                payment = 75
+                name = 'Doctor',
+                payment = 800
             },
             [2] = {
-                name = 'Doctor',
-                payment = 100
+                name = 'Senior Doctor',
+                payment = 900
             },
             [3] = {
-                name = 'Surgeon',
-                payment = 125
+                name = 'Medicine Specialist',
+                payment = 1000
             },
             [4] = {
-                name = 'Chief',
+                name = 'Assistant Surgeon',
+                payment = 1100
+            },
+            [5] = {
+                name = 'Surgeon',
+                payment = 1200
+            },
+            [6] = {
+                name = 'Medical Professor',
+                payment = 1300
+            },
+            [7] = {
+                name = 'Medical Advisor',
+                payment = 1400
+            },
+            [8] = {
+                name = 'Assistant Chief',
                 isboss = true,
                 bankAuth = true,
-                payment = 150
+                payment = 1600
+            },
+            [9] = {
+                name = 'Chief Of EMS',
+                isboss = true,
+                bankAuth = true,
+                payment = 2000
             },
         },
     },
