@@ -135,7 +135,7 @@ local function smokeWeed()
             TriggerServerEvent('hud:server:RelieveStress', math.random(15, 18))
             relieveCount += 1
             if relieveCount == 6 then
-                exports.scully_emotemenu:cancelEmote()
+                TriggerEvent('animations:client:EmoteCommandStart', {"c"})
                 if smokingWeed then
                     smokingWeed = false
                     relieveCount = 0
@@ -247,6 +247,92 @@ lib.callback.register('consumables:client:DrinkAlcohol', function(alcoholLevel, 
     else -- if canceled
         exports.qbx_core:Notify(locale('error.canceled'), 'error')
         return false
+    end
+end)
+
+RegisterNetEvent('consumables:client:UseArmor', function()
+    if GetPedArmour(PlayerPedId()) >= 75 then 
+        lib.notify({
+            title = 'Armor',
+            description = 'You already have enough armor on!',
+            type = 'error'
+        }) 
+        return 
+    end
+
+    if lib.progressCircle({
+        duration = 5000,
+        label = "Putting body armor on..",
+        position = 'bottom',
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            move = false,
+            car = false,
+            mouse = false,
+            combat = true
+        },
+        anim = {
+            dict = 'clothingshirt',
+            clip = 'try_shirt_positive_d',
+            flag = 49
+        }
+    }) then -- if completed
+        local used = lib.callback.await('consumables:server:usedItem', false, 'armor')
+        if not used then return end
+
+        TriggerServerEvent('hospital:server:SetArmor', 75)
+        SetPedArmour(cache.ped, 75)
+    else -- if canceled
+        exports.qbx_core:Notify(locale('error.canceled'), 'error')
+        lib.notify({
+            title = 'Body Armor',
+            description = locale('error.canceled'),
+            type = 'error'
+        }) 
+    end
+end)
+
+RegisterNetEvent('consumables:client:UseHeavyArmor', function()
+    if GetPedArmour(PlayerPedId()) == 100 then 
+        lib.notify({
+            title = 'Heavy Armor',
+            description = 'You already have enough armor on!',
+            type = 'error'
+        }) 
+        return 
+    end
+
+    if lib.progressCircle({
+        duration = 5000,
+        label = "Putting heavy body armor on..",
+        position = 'bottom',
+        useWhileDead = false,
+        canCancel = true,
+        disable = {
+            move = false,
+            car = false,
+            mouse = false,
+            combat = true
+        },
+        anim = {
+            dict = 'clothingshirt',
+            clip = 'try_shirt_positive_d',
+            flag = 49
+        }
+    }) then -- if completed
+        local used = lib.callback.await('consumables:server:usedItem', false, 'heavyarmor')
+        if not used then return end
+
+        TriggerServerEvent('hospital:server:SetArmor', 100)
+        SetPedArmour(cache.ped, 100)
+    else -- if canceled
+        exports.qbx_core:Notify(locale('error.canceled'), 'error')
+        lib.notify({
+            title = 'Heavy Armor',
+            description = locale('error.canceled'),
+            type = 'error'
+        }) 
     end
 end)
 
@@ -406,7 +492,11 @@ RegisterNetEvent('consumables:client:UseJoint', function()
         local used = lib.callback.await('consumables:server:usedItem', false, 'joint')
         if not used then return end
 
-        exports.scully_emotemenu:playEmoteByCommand('joint')
+        if IsPedInAnyVehicle(PlayerPedId(), false) then
+            TriggerEvent('animations:client:EmoteCommandStart', {"smoke3"})
+        else
+            TriggerEvent('animations:client:EmoteCommandStart', {"smokeweed"})
+        end
         TriggerEvent('evidence:client:SetStatus', 'weedsmell', 300)
         smokeWeed()
     else -- if canceled

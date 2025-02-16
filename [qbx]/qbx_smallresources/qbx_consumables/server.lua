@@ -108,6 +108,19 @@ for food, params in pairs(config.consumables.food) do
     end)
 end
 
+exports.qbx_core:CreateUseableItem('heavyarmor', function(source)
+    local Player = exports.qbx_core:GetPlayer(source)
+    if Player.PlayerData.job.type == "leo" or Player.PlayerData.job.type == "ems" or Player.PlayerData.job.type == "fire" then
+        TriggerClientEvent("consumables:client:UseHeavyArmor", source)
+    else
+        TriggerClientEvent('QBCore:Notify', source,  "You cannot use Government Property", "error")
+    end
+end)
+
+exports.qbx_core:CreateUseableItem('armor', function(source)
+    TriggerClientEvent("consumables:client:UseArmor", source)
+end)
+
 exports.qbx_core:CreateUseableItem('joint', function(source)
     TriggerClientEvent('consumables:client:UseJoint', source)
 end)
@@ -132,12 +145,12 @@ exports.qbx_core:CreateUseableItem('meth', function(source)
     TriggerClientEvent('consumables:client:meth', source)
 end)
 
-exports.qbx_core:CreateUseableItem('lockpick', function(source)
+exports.qbx_core:CreateUseableItem('xd_lockpick', function(source)
     TriggerClientEvent('lockpicks:UseLockpick', source, false)
     TriggerEvent('lockpicks:UseLockpick', source, false)
 end)
 
-exports.qbx_core:CreateUseableItem('advancedlockpick', function(source)
+exports.qbx_core:CreateUseableItem('xd_advancedlockpick', function(source)
     TriggerClientEvent('lockpicks:UseLockpick', source, true)
     TriggerEvent('lockpicks:UseLockpick', source, true)
 end)
@@ -147,6 +160,26 @@ lib.callback.register('consumables:server:usedItem', function(source, item)
     if not player then return end
 
     return exports.ox_inventory:RemoveItem(source, item, 1)
+end)
+
+RegisterNetEvent('consumables:server:useHeavyArmor', function()
+    local Player = exports.qbx_core:GetPlayer(source)
+
+    if not Player then return end
+
+    if not exports.ox_inventory:RemoveItem(source, 'heavyarmor', 1) then return end
+    TriggerEvent('hospital:server:SetArmor', 100)
+    SetPedArmour(GetPlayerPed(source), 100)
+end)
+
+RegisterNetEvent('consumables:server:useArmor', function()
+    local Player = exports.qbx_core:GetPlayer(source)
+
+    if not Player then return end
+
+    if not exports.ox_inventory:RemoveItem(source, 'armor', 1) then return end
+    TriggerEvent('hospital:server:SetArmor', 75)
+    SetPedArmour(GetPlayerPed(source), 75)
 end)
 
 ---Set player's hunger state to 'amount'
