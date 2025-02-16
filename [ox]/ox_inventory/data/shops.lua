@@ -237,7 +237,7 @@ return {
 			-- { name = 'jerrycan', price = 1000, grade = 0 },
 
 			{ name = 'WEAPON_XDME', price = 500, metadata = { registered = true, serial = 'ARMY' }},
-			{ name = 'WEAPON_ARPISTOL', price = 500, metadata = { registered = true, serial = 'ARMY' }},
+		--	{ name = 'WEAPON_ARPISTOL', price = 500, metadata = { registered = true, serial = 'ARMY' }},
 			{ name = 'WEAPON_ZIPTIE', price = 500, metadata = { registered = true, serial = 'ARMY' }},
 			{ name = 'WEAPON_MPX', price = 500, metadata = { registered = true, serial = 'ARMY' }},
 			-- { name = 'WEAPON_PD509', price = 500, metadata = { registered = true, serial = 'POL' }},

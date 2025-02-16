@@ -1,5 +1,11 @@
 return {
 
+
+
+
+
+
+
 	["redchip"] = {
         ["name"] = "redchip",
         ["label"] = "Red Decryption Key",
@@ -2754,16 +2760,6 @@ return {
 		}
 	},
 
-	["trowel"] = {
-		label = "Trowel",
-		weight = 100,
-		stack = true,
-		close = true,
-		description = "",
-		client = {
-			image = "trowel.png",
-		}
-	},
 
 	["pure_crack"] = {
 		label = "Pure Crack",
