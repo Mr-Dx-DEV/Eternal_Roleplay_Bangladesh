@@ -31,7 +31,7 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 		{ coords = vec4(-337.51, -133.65, 39.15, 0), prop = false, },
 	}, ]]
 	clockin = {
-		{ coords = vec4(0.0, 0.0, 0.0, 0), prop = false, },
+		{ coords = vec4(-346.02, -130.29, 39.2, 248.3), prop = false, },
 	},
 	manualRepair = {
 		{ coords = vec4(-341.30642700195, -164.86755371094, 39.009391784668, 340.96734619141), prop = true, },
@@ -60,7 +60,7 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 		color = 81,
 		sprite = 446,
 		disp = 6,
-		scale = 0.7,
+		scale = 0.5,
 		cat = nil,
 	},
 	discord = {

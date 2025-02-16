@@ -2,7 +2,7 @@
     :class="{hovered:hoveredSettingsElement == 'info' || selectedSettingsElement == 'info'}">
     <div class="info-wrapper">
 
-        <div class="server-info" :style="getServerInfoBoxStyle" v-if="!hudSettings.hideServerInfo">
+        <!-- <div class="server-info" :style="getServerInfoBoxStyle" v-if="!hudSettings.hideServerInfo">
             <div class="player-name-container">
                 <h1>{{waterMarkInformations.discordlink}}</h1>
                 <p>{{formattedDate}}</p>
@@ -17,12 +17,12 @@
                 <img class="logo" :src="waterMarkInformations.logo">
                 <img class="blur-img" :src="waterMarkInformations.logo">
             </div>
-        </div>
-        <div class="name-box" :style="getNameBoxStyle" v-if="!hudSettings.hideCharacterInfo">
+        </div> -->
+        <!-- <div class="name-box" :style="getNameBoxStyle" v-if="!hudSettings.hideCharacterInfo">
             <h1>{{player_name}} - {{ hudSettings.streamerMode && !hudSettings.showMyPlayerId ? '**' : id}}</h1>
             <div id="timer"></div>
             <p>{{FormatJob}}</p>
-        </div>
+        </div> -->
         <div class="money-container">
             <div :class="{moneyAdd:moneyChange['bank'].amount}"  class="money-box bank bank-box" :style="getBankBoxStyle" v-if="!hudSettings.hideBankMoney && forceAccountsVisibility.bank">
                 <inlinesvg :fill="moneyChange['bank'].amount ? '#424242' : 'white'" src="./app/pages/info/images/bank-icon.svg"></inlinesvg>

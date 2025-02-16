@@ -420,8 +420,8 @@ Config.GPSBlips = {
         plane = 307,     -- Blip for when in planes
     },
     settings = {
-        color = 3,
-        scale = 0.5,
+        color = 38,
+        scale = 0.6,
         short = false,
         category = 7
     }
