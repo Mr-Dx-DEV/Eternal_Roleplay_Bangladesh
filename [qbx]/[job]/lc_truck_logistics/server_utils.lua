@@ -1,4 +1,4 @@
-WebhookURL = "WEBHOOK" -- Webhook to send logs to discord
+WebhookURL = "https://discord.com/api/webhooks/1340634375557218304/Py49zKaIHgrXfOxq-KdwWgTLXxf58d_71Gdzif7JojJUYadEELNspK-53yKsgW6hFrDZ" -- Webhook to send logs to discord
 
 function beforeBuyLocation(source,user_id)
 	-- Here you can do any verification when a player is opening the trucker UI for the first time, like if player has the permission or money to that or anything else you want to check. return true or false

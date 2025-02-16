@@ -85,7 +85,7 @@ return {
         closedReason = 'Server Closed', -- Reason message to display when people can't join the server
         whitelist = false, -- Enable or disable whitelist on the server
         whitelistPermission = 'admin', -- Permission that's able to enter the server when the whitelist is on
-        discord = '', -- Discord invite link
+        discord = 'https://discord.gg/6FuNhygcuU', -- Discord invite link
         checkDuplicateLicense = true, -- Check for duplicate rockstar license on join
         ---@deprecated use cfg ACE system instead
         permissions = { 'god', 'admin', 'mod' }, -- Add as many groups as you want here after creating them in your server.cfg
@@ -102,11 +102,11 @@ return {
     -- this configuration is for core events only. putting other webhooks here will have no effect
     logging = {
         webhook = {
-            ['default'] = nil, -- default
-            ['joinleave'] = nil, -- default
-            ['ooc'] = nil, -- default
-            ['anticheat'] = nil, -- default
-            ['playermoney'] = nil, -- default
+            ['default'] = 'https://discord.com/api/webhooks/1340636382615310488/KXufk_XLBGQgYf_l3yjTkIILdv5PdqwSeoL6eNEexW-xxkk1p3wqly8t_S7_uH-sGJ2t', -- default
+            ['joinleave'] = 'https://discord.com/api/webhooks/1340636442321490010/RczkJ0QgfSRBUvZS_N_Fv1Bp7T249pjtfWHVrA7cQBW-aVF3felG6xHY9SMS7tcq86RO', -- default
+            ['ooc'] = 'https://discord.com/api/webhooks/1340636505948815395/PHl1t99oqbA8e0r93oSPX1AcsetqAe4mDrOvNQXiNd7MI08iWgyJcK2uIwHptnrE1qXz', -- default
+            ['anticheat'] = 'https://discord.com/api/webhooks/1340636565545943145/x4Cc_UwNOJewu3Y6Np0UAHQZGogPhh4m114WtpU6PEHBvNk-xS1LWGFW4t3-ZFO-z58i', -- default
+            ['playermoney'] = 'https://discord.com/api/webhooks/1340636620663164989/POsic-yzWDY0auUXTFS88BFpssyz2ADuFNfHxB0zHOp55BGZY9WciSq0uNhpwuXCZVnW', -- default
         },
         role = {} -- Role to tag for high priority logs. Roles use <@%roleid> and users/channels are <@userid/channelid>
     },

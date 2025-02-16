@@ -1,8 +1,8 @@
 -- CREDIT : https://github.com/JaredScar/Badger_Discord_API
 if Config.EnableDiscordRoles then
     local discordRoles = {
-        Guild_ID = '', -- Set to the ID of your guild (or your Primary guild if using Multiguild)
-        Bot_Token = '',
+        Guild_ID = '1268468932973563957', -- Set to the ID of your guild (or your Primary guild if using Multiguild)
+        Bot_Token = 'MTM0MDQwNDc4MzUyNTI2OTU5NQ.Gb-gub.kXppqXZ-rHVENEoJldqZdA18l9ZwKtjmLTahKw',
         CacheDiscordRoles = true, -- true to cache player roles, false to make a new Discord Request every time
         CacheDiscordRolesTime = 1200, -- if CacheDiscordRoles is true, how long to cache roles before clearing (in seconds)
     }

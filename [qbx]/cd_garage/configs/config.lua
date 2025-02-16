@@ -144,11 +144,11 @@ Config.Impound = {
 
 
 Config.TransferVehicle = {
-    ENABLE = true, --Do you want to use the built features to transfer vehicles to another player?
+    ENABLE = false, --Do you want to use the built features to transfer vehicles to another player?
     chat_command = 'transfervehicle', --Customise the chat command to transfer vehicles.
 
     Transfer_Blacklist = { --Vehicles inside this table will not be able to be transfered to another player. Use the vehicles spawn name. eg., `adder`.
-        [`dump`] = true,
+        [`dump`] = false,
         --[`add_more_here`] = true,
     }
 }

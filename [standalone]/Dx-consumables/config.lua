@@ -6,11 +6,11 @@ Config = {
 	Debug = false,
 	Core = "qb-core",
 
-	Inv = "qb", -- set to "ox" if using ox_inventory
-	Notify = "qb",  -- set to "ox" if using ox_lib
+	Inv = "ox", -- set to "ox" if using ox_inventory
+	Notify = "ox",  -- set to "ox" if using ox_lib
 
 	UseProgbar = true,
-	ProgressBar = "qb", -- set to "ox" if using ox_lib
+	ProgressBar = "ox", -- set to "ox" if using ox_lib
 
 	Consumables = {
 		-- Default QB food and drink item override
