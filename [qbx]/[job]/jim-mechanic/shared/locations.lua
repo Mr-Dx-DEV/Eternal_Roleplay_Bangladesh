@@ -22,14 +22,11 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 	},
 	store = {
 		{ coords = vec4(-333.3, -161.58, 39.01, 345), w = 5.6, d = 5.5 },
-		{ coords = vec4(-336.07, -128.95, 39.22, 340), w = 1.6, d = 1.5 }
+		{ coords = vec4(-336.07, -128.95, 39.22, 340), w = 1.6, d = 1.5 },
 	},
 	crafting = {
-		{ coords = vec4(-328.42184448242, -165.7989654541, 39.009510040283, 195.7785949707), w = 3.2, d = 1.0 }
+		{ coords = vec4(-328.42184448242, -165.7989654541, 39.009510040283, 195.7785949707), w = 3.2, d = 1.0 },
 	},
-	--[[ clockin = {
-		{ coords = vec4(-337.51, -133.65, 39.15, 0), prop = false, },
-	}, ]]
 	clockin = {
 		{ coords = vec4(-346.02, -130.29, 39.2, 248.3), prop = false, },
 	},
@@ -37,9 +34,9 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 		{ coords = vec4(-341.30642700195, -164.86755371094, 39.009391784668, 340.96734619141), prop = true, },
 	},
 	carLift = {
-		{ coords = vec4(-333.95, -135.42, 39.01, 340), },
-		{ coords = vec4(-323.76, -155.36, 39.01, 249.59) },
-	},
+        { coords = vec4(-333.95, -135.42, 39.01, 340), useMLOLift = true },
+        { coords = vec4(-323.76, -155.36, 39.01, 249.59), useMLOLift = true },
+    },
 	garage = {
 		spawn = vec4(-359.2473449707, -122.99184417725, 38.699180603027, 153.87454223633),
 		out = vec4(-353.98, -127.04, 39.43, 74.74),
@@ -62,9 +59,10 @@ Config.Locations[#Config.Locations+1] = { --[[ GABZ ALTA STREET BENNYS ]]--
 		disp = 6,
 		scale = 0.5,
 		cat = nil,
+		previewImg = "https://i.imgur.com/kKC2Mw2.png",
 	},
 	discord = {
 		link = "",
-		color = 2571775,
+		color = 16711680,
 	}
 }
