@@ -92,7 +92,13 @@ if Config.JobVehicles.ENABLE then
             wait = 5
             local ped = PlayerPedId()
             local coords = GetEntityCoords(ped)
-            local job = GetJob().name
+            local type = GetJob().type
+            local job = nil
+            if type == "leo" then
+                job = "police"
+            else
+                job = GetJob().name
+            end
             local inZone = false
             if Config.JobVehicles.Locations[job] ~= nil and on_duty then
                 for cd = 1, #Config.JobVehicles.Locations[job] do

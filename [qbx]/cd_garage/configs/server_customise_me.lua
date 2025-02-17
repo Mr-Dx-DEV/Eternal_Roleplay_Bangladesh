@@ -316,11 +316,11 @@ function Notification(source, notif_type, message)
 
         elseif Config.Notification == 'ox_lib' then
             if notif_type == 1 then
-                lib.notify(source, {title = L('garage'), description = message, type = 'success'})
+                lib.notify({title = L('garage'), description = message, type = 'success'})
             elseif notif_type == 2 then
-                lib.notify(source, {title = L('garage'), description = message, type = 'inform'})
+                lib.notify({title = L('garage'), description = message, type = 'inform'})
             elseif notif_type == 3 then
-                lib.notify(source, {title = L('garage'), description = message, type = 'error'})
+                lib.notify({title = L('garage'), description = message, type = 'error'})
             end
 
         elseif Config.Notification == 'chat' then

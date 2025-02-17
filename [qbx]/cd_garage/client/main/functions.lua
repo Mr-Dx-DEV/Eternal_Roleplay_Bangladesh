@@ -349,16 +349,21 @@ function CD_DeleteVehicle(vehicle)
             Notif(3, 'entity_doesnot_exist')
             return
         end
-        RemovePersistentVehicle(vehicle, GetPlate(vehicle))
+
         RequestNetworkControl(vehicle)
+        if not NetworkHasControlOfEntity(vehicle) then
+            Notif(3, 'network_control_failed')
+            return
+        end
+
+        RemovePersistentVehicle(vehicle, GetPlate(vehicle))
         RequestNetworkId(vehicle)
+
         if NetworkHasControlOfEntity(vehicle) then
             SetEntityAsMissionEntity(vehicle)
             SetVehicleHasBeenOwnedByPlayer(vehicle, true)
             Wait(100)
             Citizen.InvokeNative(0xEA386986E786A54F, Citizen.PointerValueIntInitialized(vehicle))
-            SetEntityAsNoLongerNeeded(vehicle)
-            DeleteEntity(vehicle)
             DeleteVehicle(vehicle)
         else
             TriggerServerEvent('cd_garage:DeleteVehicleADV', NetworkGetNetworkIdFromEntity(vehicle))
@@ -880,11 +885,12 @@ function RegisterEntity(vehicle)
 end
 
 function RequestNetworkControl(vehicle)
-    timeout = 0
+    local timeout = 0
     LoadingDots.Timer = 0
     while not NetworkHasControlOfEntity(vehicle) and timeout <= 1000 do 
-        Wait(0)
+        Wait(10)  -- Wait for some time between control requests
         NetworkRequestControlOfEntity(vehicle)
+        timeout = timeout + 1  -- Increment the timeout
         Draw2DText(L('registering_network')..' '..AddWaitingDots())
     end
     if not NetworkHasControlOfEntity(vehicle) then

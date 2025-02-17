@@ -100,7 +100,7 @@ if Config.VehicleKeys.ENABLE then
         if Config.JobVehicles.share_job_keys then
             table.insert(ShareJobKeysTable[job].plates, plate)
             for c, d in pairs(ShareJobKeysTable[job].player_info) do
-                if GetPlayerName(d.source) and d.source ~= _source then
+                if GetPlayerName(d) and d.source ~= _source then
                     table.insert(KeyCacheTable, {plate = plate, owner_identifier = job, reciever_identifier = d.identifier})
                     TriggerClientEvent('cd_garage:AddKeys', d.source, plate)
                 end

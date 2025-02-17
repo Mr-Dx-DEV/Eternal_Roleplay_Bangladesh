@@ -10,7 +10,7 @@ const UM = {
         color: '#bb55da', // Todo: https://www.color-hex.com/
         opacity: 1, // 0 close background opacity, | 0.7 low background opacity,
         logo: "assets/images/logo.png",
-        logowidth: 16,
+        logowidth: 10,
         extra: {
             autoRGB: false,
             autoSnow: false,
@@ -40,17 +40,17 @@ const UM = {
 
                 volume : 0.0, // min: 0.1 | max: 1 | 0 mute
             },
-        }
+        },
 
-        // imageBackground: {
-        //     defaultIMG: {
-        //         link: "assets/images/bg/bg.jpg",
-        //     },
-        //     randomIMG: {
-        //         enabled: false,
-        //         imglist: ['bg1.jpg','bg2.png','bg3.jpg'],
-        //     },
-        // }
+        imageBackground: {
+            defaultIMG: {
+                link: "assets/images/bg/bg.jpg",
+            },
+            randomIMG: {
+                enabled: false,
+                imglist: ['bg1.jpg','bg2.png','bg3.jpg'],
+            },
+        }
     },
 
     // ? Cards

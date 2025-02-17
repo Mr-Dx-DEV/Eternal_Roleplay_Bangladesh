@@ -17,7 +17,7 @@ function L(cd) if Locales[Config.Language][cd] then return Locales[Config.Langua
 Config.Framework = 'auto_detect' --[ 'auto_detect' / 'other' ]   If you select 'auto_detect', only ESX and QBCore frameworks will be detected. Use 'other' for custom frameworks.
 Config.Database = 'auto_detect' --[ 'auto_detect' ]   If you select 'auto_detect', only MySQL, GHMattimysql, and Oxmysql SQL database resources will be detected.
 Config.AutoInsertSQL = true --Would you like the script to insert the necessary SQL tables into your database automatically? If you have already done this, please set it to false.
-Config.Notification = 'auto_detect' --[ 'auto_detect' / 'other' ]   If you select 'auto_detect', only ESX, QBCore, okokNotify, ps-ui and ox_lib notifications will be detected. Use 'other' for custom notification resources.
+Config.Notification = 'ox_lib' --[ 'auto_detect' / 'other' ]   If you select 'auto_detect', only ESX, QBCore, okokNotify, ps-ui and ox_lib notifications will be detected. Use 'other' for custom notification resources.
 Config.Language = 'EN' --[ 'EN' / 'CZ' / 'DE' / 'DK' / 'ES' / 'FI' / 'FR' / 'NO' / 'NL' / 'PT' / 'SE' / 'SK' ]   You can add your own locales to locales.lua, but be sure to update the Config.Language to match it.
 
 Config.FrameworkTriggers = {
@@ -123,13 +123,17 @@ Config.Impound = {
 
     Authorized_Jobs = { --Only jobs inside this table can impound vehicles or unimpound vehicles.
         ['police'] = true,
-        ['mechanic'] = true,
+        ['ambulance'] = true,
+        ['fire'] = true,
+        ['bcso'] = true,
+        ['sasp'] = true,
+        ['fib'] = true,
         --['add_more_here'] = true,
     },
 
     Impound_Fee = { --This is the price players pay for their vehicle to be unimpounded.
-        method = 'default', --[ 'default' / 'vehicles_data' ] Read below for more info on each of these 2 options. (Config.VehiclesData.ENABLE must be enabled if you want to use 'vehicles_data').
-        default_price = 1000, --If 'default' method is chosen, then it will be a set price to unimpounded any vehicle. (eg., $1000 fee).
+        method = 'vehicles_data', --[ 'default' / 'vehicles_data' ] Read below for more info on each of these 2 options. (Config.VehiclesData.ENABLE must be enabled if you want to use 'vehicles_data').
+        default_price = 250, --If 'default' method is chosen, then it will be a set price to unimpounded any vehicle. (eg., $1000 fee).
         vehiclesdata_price_multiplier = 1 --If 'vehicles_data' method is chosen, the unimpounded vehicle price will be a % of the vehcles value. (eg., 1% of a $50,000 car would be a $500 fee).
     }
 }
@@ -148,7 +152,7 @@ Config.TransferVehicle = {
     chat_command = 'transfervehicle', --Customise the chat command to transfer vehicles.
 
     Transfer_Blacklist = { --Vehicles inside this table will not be able to be transfered to another player. Use the vehicles spawn name. eg., `adder`.
-        [`dump`] = false,
+        [`dump`] = true,
         --[`add_more_here`] = true,
     }
 }
@@ -164,7 +168,7 @@ Config.TransferVehicle = {
 
 Config.TransferGarage = {
     ENABLE = true, --Do you want to allow players to pay for their vehicles to be transferred to another garage?
-    transfer_fee = 500 --The cost per vehicle garage transfer ^.
+    transfer_fee = 50 --The cost per vehicle garage transfer ^.
 }
 
 
@@ -220,6 +224,9 @@ Config.FakePlates = {
             ENABLE = false, --Do you want to allow certain jobs to remove a fake plate? (the vehicles owner will always be able to remove plates).
             table = { --The list of jobs who can remove a fake plate.
                 ['police'] = true,
+                ['sasp'] = true,
+                ['fib'] = true,
+                ['bcso'] = true,
                 --['add_more_here'] = true,
             }
         }
@@ -567,7 +574,7 @@ Config.GangGarages = {
 
     Blip = { --You can find more info on blips here - https://docs.fivem.net/docs/game-references/blips.
         sprite = 84, --Icon of the blip.
-        scale = 0.4, --Size of the blip.
+        scale = 0.5, --Size of the blip.
         colour = 22, --Colour of the blip.
         name = L('gang_garage')..': ' --You dont need to change this.
     },
@@ -594,25 +601,25 @@ Config.GangGarages = {
 --╚═════╝ ╚══════╝╚═╝╚═╝     ╚══════╝
 
 
-Config.Unique_Blips = true --Do you want each garage to be named by its unique id, for example: 'Garage A'? (If disabled all garages will be called 'Garage').
+Config.Unique_Blips = false --Do you want each garage to be named by its unique id, for example: 'Garage A'? (If disabled all garages will be called 'Garage').
 Config.Blip = { --You can find more info on blips here - https://docs.fivem.net/docs/game-references/blips.
     ['car'] = {
         sprite = 357, --Icon of the blip.
-        scale = 0.4, --Size of the blip.
+        scale = 0.5, --Size of the blip.
         colour = 9, --Colour of the blip.
         name = L('garage')..' ' --You dont need to change this.
     },
 
     ['boat'] = {
         sprite = 357,
-        scale = 0.4,
+        scale = 0.5,
         colour = 9,
         name = L('harbor')..' '
     },
 
     ['air'] = {
         sprite = 357,
-        scale = 0.4,
+        scale = 0.5,
         colour = 9,
         name = L('hangar')..' '
     }
@@ -819,6 +826,7 @@ Config.Locations = {
         JobRestricted = nil,
     },
 }
+
 
 
 --██╗███╗   ███╗██████╗  ██████╗ ██╗   ██╗███╗   ██╗██████╗     ██╗      ██████╗  ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗

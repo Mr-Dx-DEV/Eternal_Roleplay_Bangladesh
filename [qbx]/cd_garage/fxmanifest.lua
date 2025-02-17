@@ -8,7 +8,7 @@ lua54 'yes'
 shared_scripts {
     'configs/locales.lua',
     'configs/config.lua',
-    --'@ox_lib/init.lua' --⚠️PLEASE READ⚠️; Uncomment this line if you use 'ox_lib'.⚠️
+    '@ox_lib/init.lua' --⚠️PLEASE READ⚠️; Uncomment this line if you use 'ox_lib'.⚠️
 }
 
 client_scripts {
@@ -56,8 +56,8 @@ server_exports {
 }
 
 dependencies {
-    '/server:4960' -- ⚠️PLEASE READ⚠️; Requires at least server build 4960.
- --   'cd_drawtextui', --⚠️PLEASE READ⚠️; Remove this line if you don't use 'cd_drawtextui' and you have already edited the code accordingly.⚠️
+    '/server:4960', -- ⚠️PLEASE READ⚠️; Requires at least server build 4960.
+    'cd_drawtextui' --⚠️PLEASE READ⚠️; Remove this line if you don't use 'cd_drawtextui' and you have already edited the code accordingly.⚠️
  --   'cd_garageshell'
 }
 

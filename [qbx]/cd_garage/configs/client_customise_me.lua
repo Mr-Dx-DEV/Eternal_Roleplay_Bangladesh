@@ -125,7 +125,7 @@ function GetJob()
     
     elseif Config.Framework == 'qbcore' then
         while JobData.name == nil do Wait(0) end
-        return {name = JobData.name, label = JobData.label}
+        return {name = JobData.name, label = JobData.label, type = JobData.type or "none"}
 
     elseif Config.Framework == 'other' then
         return {name = 'unemployed', label = 'Unemployed'} --return a players job name and label (table).
@@ -286,14 +286,14 @@ end)
 
 
 function GetFuel(vehicle, plate) --This gets triggered just before you store your vehicle.
-    if GetResourceState('LegacyFuel') == 'started' then
-        return exports['LegacyFuel']:GetFuel(vehicle)
+    if GetResourceState('cdn-fuel') == 'started' then
+        return exports['cdn-fuel']:GetFuel(vehicle)
     
     elseif GetResourceState('esx-sna-fuel') == 'started' then
         return exports['esx-sna-fuel'], GetFuel(vehicle)
 
-    elseif GetResourceState('cdn-fuel') == 'started' then
-        return exports['cdn-fuel']:GetFuel(vehicle)
+    elseif GetResourceState('ps-fuel') == 'started' then
+        return exports['ps-fuel']:GetFuel(vehicle)
 
     elseif GetResourceState('lj-fuel') == 'started' then
         return exports['lj-fuel']:GetFuel(vehicle)
@@ -316,14 +316,14 @@ function GetFuel(vehicle, plate) --This gets triggered just before you store you
 end
 
 function SetFuel(vehicle, plate, fuel_level) --This gets triggered after you spawn your vehicle.
-    if GetResourceState('LegacyFuel') == 'started' then
-        exports['LegacyFuel']:SetFuel(vehicle, fuel_level)
+    if GetResourceState('cdn-fuel') == 'started' then
+        exports['cdn-fuel']:SetFuel(vehicle, fuel_level)
     
     elseif GetResourceState('esx-sna-fuel') == 'started' then
         exports['esx-sna-fuel']:SetFuel(vehicle, fuel_level)
 
-    elseif GetResourceState('cdn-fuel') == 'started' then
-        exports['cdn-fuel']:SetFuel(vehicle, fuel_level)
+    elseif GetResourceState('ps-fuel') == 'started' then
+        exports['ps-fuel']:SetFuel(vehicle, fuel_level)
 
     elseif GetResourceState('lj-fuel') == 'started' then
         exports['lj-fuel']:SetFuel(vehicle, fuel_level)
@@ -493,7 +493,6 @@ AddEventHandler('onResourceStop', function(resource)
         end
     end
 end)
-
 
 
 --███╗   ██╗ ██████╗ ████████╗██╗███████╗██╗ ██████╗ █████╗ ████████╗██╗ ██████╗ ███╗   ██╗███████╗
