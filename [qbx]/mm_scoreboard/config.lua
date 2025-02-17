@@ -1,7 +1,7 @@
 Config = Config or {}
 
 Config.Guild_ID = '1268468932973563957'  --server id
-Config.FormattedToken = 'MTM0MDQwNDc4MzUyNTI2OTU5NQ.GdJU4k.Klvk5FZ1C5O8oQQHfZ3Q1SnlGKzH_uKiNDnJAY'   --server bot token
+Config.FormattedToken = 'MTM0MDQwNDc4MzUyNTI2OTU5NQ.GrIypP.3AfiQuzDyjcVGTx990dML9PiBS9CMf8R0VUzDo'   --server bot token
 
 Config.EnablePriorityColor = true  -- Toggle key to enable or disable custom color for priority holder
 Config.PriorityColor = {

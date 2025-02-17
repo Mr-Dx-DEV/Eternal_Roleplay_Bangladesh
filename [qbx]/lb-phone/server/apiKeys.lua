@@ -21,7 +21,7 @@ LOGS = {
     Uploads = "https://discord.com/api/webhooks/1340632351721525269/QHU6l8oyjO3XZrzu_PtDkwH01JPB5t4oT6marvClnvKBz4-Q_rZXc2V3JhEdEgc958dC" -- all camera uploads will go here
 }
 
-DISCORD_TOKEN = 'MTM0MDQwNDc4MzUyNTI2OTU5NQ.GdJU4k.Klvk5FZ1C5O8oQQHfZ3Q1SnlGKzH_uKiNDnJAY' -- you can set a discord bot token here to get the players discord avatar for logs
+DISCORD_TOKEN = 'MTM0MDQwNDc4MzUyNTI2OTU5NQ.GrIypP.3AfiQuzDyjcVGTx990dML9PiBS9CMf8R0VUzDo' -- you can set a discord bot token here to get the players discord avatar for logs
 
 -- Set your API keys for uploading media here.
 -- Please note that the API key needs to match the correct upload method defined in Config.UploadMethod.

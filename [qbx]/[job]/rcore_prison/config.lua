@@ -516,7 +516,7 @@ Config = {
         Blip = {
             enable = true, -- Do you want to show blip on map?
             sprite = 643,
-            scale = 1.0,
+            scale = 0.5,
         },
 
         StartLocations = {
