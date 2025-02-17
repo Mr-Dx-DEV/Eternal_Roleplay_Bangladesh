@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 fx_version('cerulean')
 author 'Marttins#8421'
 description 'Simple full configurable restaurant script for QBCore by Marttins#8421'

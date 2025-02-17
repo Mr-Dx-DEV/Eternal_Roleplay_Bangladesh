@@ -26,7 +26,7 @@ AK4Y.Blip = {
 
 AK4Y.Interaction = {
     InteractionType = "target", --target or drawtext
-    TargetName = "ox_target",
+    TargetName = "qb-target",
 }
 
 AK4Y.StartZone = {

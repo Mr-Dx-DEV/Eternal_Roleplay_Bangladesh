@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 lua54 "yes" -- needed for Reaper
 
 games {'gta5'}

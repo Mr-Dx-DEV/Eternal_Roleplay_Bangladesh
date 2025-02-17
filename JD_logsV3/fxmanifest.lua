@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 --[[
     #####################################################################
     #                _____           __          _                      #
@@ -12,17 +11,12 @@ shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
     #                                                                   #
     #####################################################################
 ]]
-
-
 version '3.1.4'
 author 'Prefech'
 description 'FXServer logs to Discord (https://prefech.com/)'
 repository 'https://github.com/prefech/JD_logsV3'
-
-
 dependency 'yarn'
 dependency 'screenshot-basic'
-
 -- Server Scripts
 server_scripts {
     'server/explosions.lua',
@@ -32,17 +26,14 @@ server_scripts {
     'server/txAdminEvents.lua',
     'index.js'
 }
-
 --Client Scripts
 client_scripts {
     'client/clientTables.lua',
     'client/main.lua'
 }
-
 files {
     'lang/*.json'
 }
-
 lua54 'yes'
 game 'gta5'
 fx_version 'cerulean'

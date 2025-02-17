@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 -- FXVersion Version
 fx_version 'adamant'
 games { 'gta5' }

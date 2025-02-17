@@ -8,9 +8,9 @@ function Utils.Framework.giveVehicleKeys(vehicle, plate, model)
 	elseif Config.custom_scripts_compatibility.keys == "cd_garage" then
 		TriggerEvent('cd_garage:AddKeys', exports['cd_garage']:GetPlate(vehicle))
 	elseif Config.custom_scripts_compatibility.keys == "wasabi_carlock" then
-		local class = GetVehicleClass(vehicle) == 20
-		if not class then return end -- Wasabi does not support giving keys to trailers? why?
 		exports['wasabi_carlock']:GiveKey(plate)
+	elseif Config.custom_scripts_compatibility.keys == "MrNewbVehicleKeys" then
+		exports.MrNewbVehicleKeys:GiveKeys(vehicle)
 	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "jaksam" then
 		TriggerEvent("vehiclekeys:client:SetOwner", plate)
 	else
@@ -25,6 +25,8 @@ function Utils.Framework.removeVehicleKeys(vehicle)
 		exports['qs-vehiclekeys']:RemoveKeys(plate, model)
 	elseif Config.custom_scripts_compatibility.keys == "wasabi_carlock" then
 		exports['wasabi_carlock']:RemoveKey(plate)
+	elseif Config.custom_scripts_compatibility.keys == "MrNewbVehicleKeys" then
+		exports.MrNewbVehicleKeys:RemoveKeys(vehicle)
 	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "cd_garage" or Config.custom_scripts_compatibility.keys == "jaksam" then
 		-- Do nothing :)
 	else
@@ -37,6 +39,8 @@ function Utils.Framework.removeVehicleKeysFromPlate(plate,model)
 		exports['qs-vehiclekeys']:RemoveKeys(plate, model)
 	elseif Config.custom_scripts_compatibility.keys == "wasabi_carlock" then
 		exports['wasabi_carlock']:RemoveKey(plate)
+	elseif Config.custom_scripts_compatibility.keys == "MrNewbVehicleKeys" then
+		exports.MrNewbVehicleKeys:RemoveKeysByPlate(plate)
 	elseif Config.custom_scripts_compatibility.keys == "default" or Config.custom_scripts_compatibility.keys == "cd_garage" or Config.custom_scripts_compatibility.keys == "jaksam" then
 		-- Do nothing :)
 	else
@@ -53,8 +57,8 @@ function Utils.Framework.setVehicleFuel(vehicle, plate, model, fuel)
 		exports['qb-sna-fuel']:SetFuel(vehicle, fuel)
 	elseif Config.custom_scripts_compatibility.fuel == "cdn-fuel" then
 		exports['cdn-fuel']:SetFuel(vehicle, fuel)
-	elseif Config.custom_scripts_compatibility.fuel == "Renewed-Fuel" then
-		exports['Renewed-Fuel']:SetFuel(vehicle, fuel)
+	elseif Config.custom_scripts_compatibility.fuel == "LegacyFuel" then
+		exports['LegacyFuel']:SetFuel(vehicle, fuel)
 	elseif Config.custom_scripts_compatibility.fuel == "default" then
 		exports['LegacyFuel']:SetFuel(vehicle, fuel)
 	else

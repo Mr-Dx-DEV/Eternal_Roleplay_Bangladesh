@@ -111,10 +111,13 @@ return {
         role = {} -- Role to tag for high priority logs. Roles use <@%roleid> and users/channels are <@userid/channelid>
     },
 
+    -- giveVehicleKeys = function(src, plate, vehicle)
+    --     return exports.qbx_vehiclekeys:GiveKeys(src, vehicle)
+    -- end,
     giveVehicleKeys = function(src, plate, vehicle)
-        return exports.qbx_vehiclekeys:GiveKeys(src, vehicle)
+        return TriggerClientEvent('vehiclekeys:client:SetOwner', src, plate)
     end,
-
+    
     getSocietyAccount = function(accountName)
         return exports['Renewed-Banking']:getAccountMoney(accountName)
     end,

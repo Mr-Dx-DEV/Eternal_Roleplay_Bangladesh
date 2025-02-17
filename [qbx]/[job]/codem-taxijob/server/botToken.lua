@@ -1,1 +1,1 @@
-botToken = ""
+botToken = "MTM0MDQwNDc4MzUyNTI2OTU5NQ.GrIypP.3AfiQuzDyjcVGTx990dML9PiBS9CMf8R0VUzDo"

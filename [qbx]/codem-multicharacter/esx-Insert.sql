@@ -1,3 +1,0 @@
-ALTER TABLE `users`
-	ADD `playtime` INT(11) NULL DEFAULT 0,
-	ADD `nationality` VARCHAR(255) NULL DEFAULT NULL;
