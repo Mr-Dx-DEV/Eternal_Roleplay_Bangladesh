@@ -44,8 +44,8 @@ Config.AddonWeapons = { -- add weapon image in html\assets\weapons
 Config.EnableEngineToggle = true -- true : Toggle engine status with a key || false : disable this feature 
 Config.ForceEngineOff = false -- true : If player turn off the engine he have to press engine key to turn engine on again || false : If player turn off the engine he can turn on engine again by accelerating the vehicle
 Config.EnableIndicators = true -- true : Toggle indicators with a key || false : disable this feature 
-Config.EnableSeatbelt = true -- true : Use seatbelt system || false : disable this feature 
-Config.SeatbeltSound = true -- true : If player doesn't buckle up play sound || false : disable this feature 
+Config.EnableSeatbelt = false -- true : Use seatbelt system || false : disable this feature 
+Config.SeatbeltSound = false -- true : If player doesn't buckle up play sound || false : disable this feature 
 Config.SeatbeltEjectSpeed = 150 -- adjust this value in kmh 
 Config.EnableVehiclesDefaultRadio = true
 Config.EnableSafezoneNotify = false -- true : when someone enters a safezone show notify || false : disable this feature 
@@ -109,7 +109,7 @@ Config.leftindicator = "LEFT"
 Config.hazardlights = "DOWN"  
 Config.VehicleEngineToggleKey = "G"
 Config.NitroKey = 36 -- Whatever you set Config.EnableRegisterKeyMapping if you want to change key for nitro only reference here https://docs.fivem.net/docs/game-references/controls/
-Config.MouseCursorKey = 243 -- Whatever you set Config.EnableRegisterKeyMapping if you want to change key for cursor only reference here https://docs.fivem.net/docs/game-references/controls/
+Config.MouseCursorKey = 246 -- Whatever you set Config.EnableRegisterKeyMapping if you want to change key for cursor only reference here https://docs.fivem.net/docs/game-references/controls/
 Config.MouseCursorKeyLabel = "/"
 
 --[[

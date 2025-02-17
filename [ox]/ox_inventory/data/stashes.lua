@@ -1,13 +1,13 @@
 return {
 	{
-		coords = vec3(-1183.98, -901.08, 13.8),
+		coords = vec3(447.83, -998.17, 30.69),
 		target = {
-			loc = vec3(-1183.98, -901.08, 13.8),
+			loc = vec3(447.83, -998.17, 30.69),
 			length = 1.2,
 			width = 5.6,
 			heading = 30,
-			minZ = 12.8,
-  			maxZ = 16.8,
+			minZ = 29.80,
+  			maxZ = 32.98,
 			label = 'Open personal locker'
 		},
 		name = 'policelocker',

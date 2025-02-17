@@ -506,25 +506,25 @@ Config.JobVehicles = {
         
         ['police'] = { --If you choose to add more tables here for more jobs, they must be the jobs name, not the label.
             --MISSION ROW PD
-            [1] = {coords = vector3(451.27, -1016.05, 28.48), spawn_coords = vector4(450.19, -1021.18, 28.4, 93.47), distance = 10, garage_type = 'car', method = 'regular'}, --Mission Row PD (cars)
-            [2] = {coords = vector3(449.27, -981.24, 43.69), spawn_coords = vector4(449.27, -981.24, 43.69, 94.13), distance = 5, garage_type = 'air', method = 'regular'}, --Mission Row PD (helipad)
-            --SANDY PD
-            [3] = {coords = vector3(1868.33, 3686.05, 33.78), spawn_coords = vector4(1872.68, 3687.19, 33.65, 211.34), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy PD (cars)
-            [4] = {coords = vector3(1866.09, 3655.66, 33.9), spawn_coords = vector4(1866.09, 3655.66, 33.9, 27.07), distance = 5, garage_type = 'air', method = 'regular'}, --Sandy PD (helipad)
-            --PALETO PD
-            [5] = {coords = vector3(-463.43, 6039.67, 31.34), spawn_coords = vector4(-459.3, 6042.86, 31.34, 134.85), distance = 10, garage_type = 'car', method = 'regular'}, --Paleto PD (cars)
-            [6] = {coords = vector3(-466.82, 5997.14, 31.25), spawn_coords = vector4(-475.41, 5988.47, 31.34, 318.3), distance = 5, garage_type = 'air', method = 'regular'}, --Paleto PD (helipad)
-            --BOATS
-            [7] = {coords = vector3(-1598.49, -1201.4, 0.82), spawn_coords = vector4(-1609.96, -1210.83, -0.03, 134.45), distance = 20, garage_type = 'boat', method = 'regular'}, --Vespucci Beach (boats)
-            [8] = {coords = vector3(1426.31, 3750.12, 31.76), spawn_coords = vector4(1430.37, 3771.52, 29.86, 336.36), distance = 20, garage_type = 'boat', method = 'regular'}, --Sandy Lake (boats)
+            -- [1] = {coords = vector3(451.27, -1016.05, 28.48), spawn_coords = vector4(450.19, -1021.18, 28.4, 93.47), distance = 10, garage_type = 'car', method = 'regular'}, --Mission Row PD (cars)
+            -- [2] = {coords = vector3(449.27, -981.24, 43.69), spawn_coords = vector4(449.27, -981.24, 43.69, 94.13), distance = 5, garage_type = 'air', method = 'regular'}, --Mission Row PD (helipad)
+            -- --SANDY PD
+            -- [3] = {coords = vector3(1868.33, 3686.05, 33.78), spawn_coords = vector4(1872.68, 3687.19, 33.65, 211.34), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy PD (cars)
+            -- [4] = {coords = vector3(1866.09, 3655.66, 33.9), spawn_coords = vector4(1866.09, 3655.66, 33.9, 27.07), distance = 5, garage_type = 'air', method = 'regular'}, --Sandy PD (helipad)
+            -- --PALETO PD
+            -- [5] = {coords = vector3(-463.43, 6039.67, 31.34), spawn_coords = vector4(-459.3, 6042.86, 31.34, 134.85), distance = 10, garage_type = 'car', method = 'regular'}, --Paleto PD (cars)
+            -- [6] = {coords = vector3(-466.82, 5997.14, 31.25), spawn_coords = vector4(-475.41, 5988.47, 31.34, 318.3), distance = 5, garage_type = 'air', method = 'regular'}, --Paleto PD (helipad)
+            -- --BOATS
+            -- [7] = {coords = vector3(-1598.49, -1201.4, 0.82), spawn_coords = vector4(-1609.96, -1210.83, -0.03, 134.45), distance = 20, garage_type = 'boat', method = 'regular'}, --Vespucci Beach (boats)
+            -- [8] = {coords = vector3(1426.31, 3750.12, 31.76), spawn_coords = vector4(1430.37, 3771.52, 29.86, 336.36), distance = 20, garage_type = 'boat', method = 'regular'}, --Sandy Lake (boats)
         },
         ['ambulance'] = {
             --PILLBOX HOSPITAL
-            [1] = {coords = vector3(294.35, -607.89, 43.33), spawn_coords = vector4(294.35, -607.89, 43.33, 74.04), distance = 10, garage_type = 'car', method = 'regular'}, --Pillbox Hospital (cars)
-            [2] = {coords = vector3(352.22, -588.03, 74.17), spawn_coords = vector4(352.22, -588.03, 74.17, 74.5), distance = 10, garage_type = 'air', method = 'regular'}, --Pillbox Hospital (helipad)
-            --Sandy MEDICAL
-            [3] = {coords = vector3(1808.53, 3677.7, 34.28), spawn_coords = vector4(1805.42, 3681.13, 34.22, 298.45), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy Medical (cars)
-            [4] = {coords = vector3(1830.74, 3634.77, 34.39), spawn_coords = vector4(1830.74, 3634.77, 34.39, 29.63), distance = 10, garage_type = 'air', method = 'regular'}, --Sandy Medical (helipad)
+            -- [1] = {coords = vector3(294.35, -607.89, 43.33), spawn_coords = vector4(294.35, -607.89, 43.33, 74.04), distance = 10, garage_type = 'car', method = 'regular'}, --Pillbox Hospital (cars)
+            -- [2] = {coords = vector3(352.22, -588.03, 74.17), spawn_coords = vector4(352.22, -588.03, 74.17, 74.5), distance = 10, garage_type = 'air', method = 'regular'}, --Pillbox Hospital (helipad)
+            -- --Sandy MEDICAL
+            -- [3] = {coords = vector3(1808.53, 3677.7, 34.28), spawn_coords = vector4(1805.42, 3681.13, 34.22, 298.45), distance = 10, garage_type = 'car', method = 'regular'}, --Sandy Medical (cars)
+            -- [4] = {coords = vector3(1830.74, 3634.77, 34.39), spawn_coords = vector4(1830.74, 3634.77, 34.39, 29.63), distance = 10, garage_type = 'air', method = 'regular'}, --Sandy Medical (helipad)
         },
     },
 
@@ -842,7 +842,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         }
     },
 
-    ['car_2'] = { 
+    --[[ ['car_2'] = { 
         ImpoundID = 2,
         coords = {x = 1893.48, y = 3713.50, z = 32.77},
         spawnpoint = {x = 1887.123, y = 3710.348, z = 31.92, h = 212.0},
@@ -852,7 +852,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
             colour = 3,
             name = L('car_sandy_impound'),
         }
-    },
+    }, ]]
 
     ['boat_1'] = {
         ImpoundID = 3,

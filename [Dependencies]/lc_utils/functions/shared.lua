@@ -6,7 +6,7 @@ Utils.String = {}
 Utils.CustomScripts = {}
 Utils.Config = Config
 Utils.Lang = {}
-Utils.Version = LoadResourceFile("lc_utils", "version") and string.gsub(LoadResourceFile("lc_utils", "version"), '^%s*(.-)%s*$', '%1') or nil
+Utils.Version = '1.1.5'
 
 exports('GetUtils', function()
 	return Utils
@@ -138,24 +138,6 @@ function Utils.Table.deepCopy(orig)
 	return copy
 end
 
-function Utils.Table.deepMerge(target, source)
-	for key, value in pairs(source) do
-		if type(value) == "function" then
-			target[key] = value
-		elseif type(value) == "table" and value ~= nil then
-			-- If the target does not have the key, initialize it as a table
-			if type(target[key]) ~= "table" then
-				target[key] = {}
-			end
-			-- Recursively merge tables
-			Utils.Table.deepMerge(target[key], value)
-		else
-			target[key] = value
-		end
-	end
-end
-
-
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- String
 -----------------------------------------------------------------------------------------------------------------------------------------
@@ -270,7 +252,6 @@ function Utils.loadLanguageFile(lang_file)
 	local resource = getResourceName()
 	assert(resource,"^3Unknown resource loading the language files.^7")
 
-	Utils.Table.deepMerge(lang_file, Utils.Lang)
 	cached_langs[resource] = lang_file
 end
 
@@ -308,13 +289,7 @@ Citizen.CreateThread(function()
 	if GetCurrentResourceName() ~= "lc_utils" then return end
 	Wait(1000)
 
-	Utils.loadLanguageFile(Utils.Lang)
-
-	if Utils.Version then
-		print("^2[lc_utils] Loaded! Support discord: https://discord.gg/U5YDgbh ^3[v"..Utils.Version.."]^7")
-	else
-		error("^1[lc_utils] Warning: Could not load the version file.^7")
-	end
+	print("^2[lc_utils] Loaded! Support discord: https://discord.gg/U5YDgbh ^3[v"..Utils.Version.."]^7")
 
 	assert(Config, "^3You have errors in your config file, consider fixing it or redownload the original config.^7")
 	assert(Config.framework == "QBCore" or Config.framework == "ESX", string.format("^3The Config.framework must be set to ^1ESX^3 or ^1QBCore^3, its actually set to ^1%s^3.^7", Config.framework))
@@ -323,7 +298,6 @@ Citizen.CreateThread(function()
 		{ config_path = {"custom_scripts_compatibility"}, default_value = {	['fuel'] = "default", ['inventory'] = "default", ['keys'] = "default", ['mdt'] = "default", ['target'] = "disabled", ['notification'] = "default"} },
 		{ config_path = {"custom_scripts_compatibility", "notification"}, default_value = "default" },
 		{ config_path = {"owned_vehicles", "default"}, default_value = { ['garage'] = 'motelgarage', ['garage_display_name'] = 'Motel Parking' } },
-		{ config_path = {"notification"}, default_value = { ['has_title'] = false, ['position'] = "top-right", ['duration'] = 8000 } },
 		{ config_path = {"spawned_vehicles"}, default_value = {
 			['lc_truck_logistics'] = {
 				['is_static'] = false,
@@ -349,41 +323,6 @@ Citizen.CreateThread(function()
 	}
 	Config = Utils.validateConfig(Config, configs_to_validate)
 end)
-
------------------------------------------------------------------------------------------------------------------------------------------
--- File functions validator
------------------------------------------------------------------------------------------------------------------------------------------
-
-function Utils.validateFunctions(functions, file_name)
-	local resourceName = GetCurrentResourceName()
-
-	for i = 1, #functions do
-		local fnName = functions[i]
-		local fn = _G[fnName]
-		if not Utils.functionExists(fn) then
-			print("^8[" .. resourceName .. "] ^3You have a missing function (^1" .. fnName .. "^3) in your '^1" .. file_name .. "^3' file. Please update this file to ensure the script functions correctly.^7")
-			_G[fnName] = function()
-				return true
-			end
-		end
-	end
-end
-
-local cached_functions = {}
-function Utils.functionExists(fn)
-	if fn == nil then
-		return false
-	end
-
-	if cached_functions[fn] ~= nil then
-		return cached_functions[fn]
-	end
-
-	-- Cache the result of type check
-	local exists = type(fn) == "function"
-	cached_functions[fn] = exists
-	return exists
-end
 
 -----------------------------------------------------------------------------------------------------------------------------------------
 -- Config validator
@@ -424,5 +363,5 @@ function printMissingConfigMessage(config_entry)
 end
 
 function getResourceName()
-	return GetCurrentResourceName()
+	return string.match(GetInvokingResource() or "", "^lc_") and GetInvokingResource() or GetCurrentResourceName()
 end

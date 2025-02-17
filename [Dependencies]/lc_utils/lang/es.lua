@@ -13,12 +13,5 @@ Utils.Lang['es'] = {
 		['pattern_mismatch'] = "Formato no válido",
 		['too_long'] = "Esta entrada es demasiado larga",
 		['too_short'] = "Esta entrada es demasiado corta"
-	},
-
-	['notification'] = {
-		['error'] = "Error",
-		['success'] = "Éxito",
-		['warning'] = "Advertencia",
-		['info'] = "Información",
-	},
+	}
 }

@@ -1,3 +1,4 @@
+shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 fx_version 'cerulean'
 game 'gta5'
 author 'LixeiroCharmoso'
@@ -28,7 +29,6 @@ shared_scripts {
 }
 
 files {
-	"version",
 	"functions/loader.lua",
 	"nui/index.html",
 	"nui/index.js",

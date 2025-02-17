@@ -1,8 +1,8 @@
 Config = {}
 Config.Framework = 'autodetect' -- newesx, oldesx, newqb, oldqb, standalone, autodetect
 Config.ChatOpenKey = 245 --https://docs.fivem.net/docs/game-references/controls/
-Config.ShowJoins = true -- If set to false chat will not display who is joined the server.
-Config.ShowQuits = true -- If set to false chat will not display who is quited from the server.
+Config.ShowJoins = false -- If set to false chat will not display who is joined the server.
+Config.ShowQuits = false -- If set to false chat will not display who is quited from the server.
 Config.BlacklistedWords = {
     "cunt",
     "pig",

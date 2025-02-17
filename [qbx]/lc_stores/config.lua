@@ -733,7 +733,7 @@ Config.market_categories = {
 		['items'] = {
 			['beer'] = {						-- The item ID
 				['name'] = "Beer",				-- The item display name
-				['price_to_customer'] = 7,		-- Price the customer will pay when buy the product in store
+				['price_to_customer'] = 70,		-- Price the customer will pay when buy the product in store
 				['price_to_customer_min'] = 3,	-- Min price that the owner will be able to set on this product
 				['price_to_customer_max'] = 14,	-- Max price that the owner will be able to set on this product
 				['price_to_export'] = 6,		-- Price the owner will receive when exporting the item
@@ -745,7 +745,7 @@ Config.market_categories = {
 			},
 			['whiskey'] = {
 				['name'] = "Whiskey",
-				['price_to_customer'] = 10,
+				['price_to_customer'] = 100,
 				['price_to_customer_min'] = 5,
 				['price_to_customer_max'] = 20,
 				['price_to_export'] = 100,
@@ -756,7 +756,7 @@ Config.market_categories = {
 			},
 			['vodka'] = {
 				['name'] = "Vodka",
-				['price_to_customer'] = 12,
+				['price_to_customer'] = 120,
 				['price_to_customer_min'] = 6,
 				['price_to_customer_max'] = 24,
 				['price_to_export'] = 11,
@@ -800,7 +800,7 @@ Config.market_categories = {
 			}, ]]
 			['water_bottle'] = {
 				['name'] = "Bottle of Water",
-				['price_to_customer'] = 4,
+				['price_to_customer'] = 20,
 				['price_to_customer_min'] = 2,
 				['price_to_customer_max'] = 8,
 				['price_to_export'] = 3,
@@ -822,7 +822,7 @@ Config.market_categories = {
 			}, ]]
 			['kurkakola'] = {
 				['name'] = "Cola",
-				['price_to_customer'] = 4,
+				['price_to_customer'] = 30,
 				['price_to_customer_min'] = 2,
 				['price_to_customer_max'] = 8,
 				['price_to_export'] = 3,
@@ -844,7 +844,7 @@ Config.market_categories = {
 		['items'] = {
 			['tosti'] = {
 				['name'] = "Grilled Sandwich",
-				['price_to_customer'] = 4,
+				['price_to_customer'] = 80,
 				['price_to_customer_min'] = 1,
 				['price_to_customer_max'] = 6,
 				['price_to_export'] = 4,
@@ -855,7 +855,7 @@ Config.market_categories = {
 			},
 			['twerks_candy'] = {
 				['name'] = "Twerks",
-				['price_to_customer'] = 3,
+				['price_to_customer'] = 27,
 				['price_to_customer_min'] = 1,
 				['price_to_customer_max'] = 6,
 				['price_to_export'] = 4,
@@ -866,7 +866,7 @@ Config.market_categories = {
 			},
 			['snikkel_candy'] = {
 				['name'] = "Snikkel",
-				['price_to_customer'] = 3,
+				['price_to_customer'] = 40,
 				['price_to_customer_min'] = 1,
 				['price_to_customer_max'] = 6,
 				['price_to_export'] = 4,
@@ -877,7 +877,7 @@ Config.market_categories = {
 			},
 			['sandwich'] = {
 				['name'] = "Sandwich",
-				['price_to_customer'] = 3,
+				['price_to_customer'] = 25,
 				['price_to_customer_min'] = 1,
 				['price_to_customer_max'] = 6,
 				['price_to_export'] = 4,
@@ -899,7 +899,7 @@ Config.market_categories = {
 		['items'] = {
 			['phone'] = {
 				['name'] = "Phone",
-				['price_to_customer'] = 850,
+				['price_to_customer'] = 1200,
 				['price_to_customer_min'] = 425,
 				['price_to_customer_max'] = 1700,
 				['price_to_export'] = 637,
@@ -932,7 +932,7 @@ Config.market_categories = {
 			}, ]]
 			['radio'] = {
 				['name'] = "Radio",
-				['price_to_customer'] = 200,
+				['price_to_customer'] = 1800,
 				['price_to_customer_min'] = 100,
 				['price_to_customer_max'] = 400,
 				['price_to_export'] = 150,
@@ -941,17 +941,17 @@ Config.market_categories = {
 				['amount_to_delivery'] = 2,
 				['img'] = 'radio.png',
 			},
-			['drill'] = {
-				['name'] = "Drill",
-				['price_to_customer'] = 5000,
-				['price_to_customer_min'] = 100,
-				['price_to_customer_max'] = 400,
-				['price_to_export'] = 150,
-				['price_to_owner'] = 100,
-				['amount_to_owner'] = 2,
-				['amount_to_delivery'] = 2,
-				['img'] = 'drill.png',
-			},
+			-- ['drill'] = {
+			-- 	['name'] = "Drill",
+			-- 	['price_to_customer'] = 5000,
+			-- 	['price_to_customer_min'] = 100,
+			-- 	['price_to_customer_max'] = 400,
+			-- 	['price_to_export'] = 150,
+			-- 	['price_to_owner'] = 100,
+			-- 	['amount_to_owner'] = 2,
+			-- 	['amount_to_delivery'] = 2,
+			-- 	['img'] = 'drill.png',
+			-- },
 			--[[ ['laptop'] = {
 				['name'] = "Laptop",
 				['price_to_customer'] = 700,
@@ -987,7 +987,7 @@ Config.market_categories = {
 		['items'] = {
 			['repairkit'] = {
 				['name'] = "Repairkit",
-				['price_to_customer'] = 250,
+				['price_to_customer'] = 850,
 				['price_to_customer_min'] = 125,
 				['price_to_customer_max'] = 500,
 				['price_to_export'] = 225,
@@ -1009,7 +1009,7 @@ Config.market_categories = {
 			}, ]]
 			['screwdriverset'] = {
 				['name'] = "Toolkit",
-				['price_to_customer'] = 350,
+				['price_to_customer'] = 450,
 				['price_to_customer_min'] = 175,
 				['price_to_customer_max'] = 700,
 				['price_to_export'] = 315,
@@ -1018,28 +1018,39 @@ Config.market_categories = {
 				['amount_to_delivery'] = 2,
 				['img'] = 'screwdriverset.png',
 			},
-			['fishbait'] = {
-				['name'] = "Fish Bait",
-				['price_to_customer'] = 25,
+			['lockpick'] = {
+				['name'] = "Lockpick",
+				['price_to_customer'] = 250,
 				['price_to_customer_min'] = 175,
 				['price_to_customer_max'] = 700,
 				['price_to_export'] = 315,
 				['price_to_owner'] = 300,
 				['amount_to_owner'] = 2,
 				['amount_to_delivery'] = 2,
-				['img'] = 'fishbait.png',
+				['img'] = 'lockpick.png',
 			},
-			['fishingrod'] = {
-				['name'] = "Fishing Rod",
-				['price_to_customer'] = 100,
-				['price_to_customer_min'] = 175,
-				['price_to_customer_max'] = 700,
-				['price_to_export'] = 315,
-				['price_to_owner'] = 300,
-				['amount_to_owner'] = 2,
-				['amount_to_delivery'] = 2,
-				['img'] = 'fishingrod.png',
-			},
+			-- ['fishbait'] = {
+			-- 	['name'] = "Fish Bait",
+			-- 	['price_to_customer'] = 25,
+			-- 	['price_to_customer_min'] = 175,
+			-- 	['price_to_customer_max'] = 700,
+			-- 	['price_to_export'] = 315,
+			-- 	['price_to_owner'] = 300,
+			-- 	['amount_to_owner'] = 2,
+			-- 	['amount_to_delivery'] = 2,
+			-- 	['img'] = 'fishbait.png',
+			-- },
+			-- ['fishingrod'] = {
+			-- 	['name'] = "Fishing Rod",
+			-- 	['price_to_customer'] = 100,
+			-- 	['price_to_customer_min'] = 175,
+			-- 	['price_to_customer_max'] = 700,
+			-- 	['price_to_export'] = 315,
+			-- 	['price_to_owner'] = 300,
+			-- 	['amount_to_owner'] = 2,
+			-- 	['amount_to_delivery'] = 2,
+			-- 	['img'] = 'fishingrod.png',
+			-- },
 		}
 	},
 
@@ -1149,13 +1160,13 @@ Config.market_categories = {
 			-- },
 			['WEAPON_PITVIPER'] = {
 				['name'] = "JW4 PIT VIPER",
-				['price_to_customer'] = 6500,
-				['price_to_customer_min'] = 6000,
-				['price_to_customer_max'] = 7500,
-				['price_to_export'] = 1350,
-				['price_to_owner'] = 1200,
-				['amount_to_owner'] = 1,
-				['amount_to_delivery'] = 1,
+				['price_to_customer'] = 4500,
+				['price_to_customer_min'] = 900,
+				['price_to_customer_max'] = 1100,
+				['price_to_export'] = 300,
+				['price_to_owner'] = 700,
+				['amount_to_owner'] = 100,
+				['amount_to_delivery'] = 100,
 				['is_weapon'] = true,
 				['requires_license'] = false,
 				['max_amount_to_purchase'] = 1,
@@ -1163,18 +1174,19 @@ Config.market_categories = {
 			},
 			['WEAPON_GLOCK19X'] = {
 				['name'] = "G19X XL",
-				['price_to_customer'] = 6500,
-				['price_to_customer_min'] = 6000,
-				['price_to_customer_max'] = 7500,
-				['price_to_export'] = 1350,
-				['price_to_owner'] = 1200,
-				['amount_to_owner'] = 1,
-				['amount_to_delivery'] = 1,
+				['price_to_customer'] = 4500,
+				['price_to_customer_min'] = 900,
+				['price_to_customer_max'] = 1100,
+				['price_to_export'] = 300,
+				['price_to_owner'] = 700,
+				['amount_to_owner'] = 100,
+				['amount_to_delivery'] = 100,
 				['is_weapon'] = true,
 				['requires_license'] = false,
 				['max_amount_to_purchase'] = 1,
 				['img'] = 'WEAPON_GLOCK19X.png',
 			},
+			
 			
 			
 		}
@@ -1344,7 +1356,7 @@ Config.market_categories = {
 			-- },
 			['ammo-9'] = {
 				['name'] = "9mm",
-				['price_to_customer'] = 25,
+				['price_to_customer'] = 10,
 				['price_to_customer_min'] = 175,
 				['price_to_customer_max'] = 700,
 				['price_to_export'] = 300,
@@ -1405,7 +1417,7 @@ Config.market_categories = {
 			}, ]]
 			['parachute'] = {
 				['name'] = "Parachute",
-				['price_to_customer'] = 250,
+				['price_to_customer'] = 2500,
 				['price_to_customer_min'] = 1250,
 				['price_to_customer_max'] = 5000,
 				['price_to_export'] = 2500,
@@ -1416,7 +1428,7 @@ Config.market_categories = {
 			},
 			['armor'] = {
 				['name'] = "Armor",
-				['price_to_customer'] = 550,
+				['price_to_customer'] = 2550,
 				['price_to_customer_min'] = 275,
 				['price_to_customer_max'] = 700,
 				['price_to_export'] = 4500,
@@ -1427,7 +1439,7 @@ Config.market_categories = {
 			},
 			['handcuffs'] = {
 				['name'] = "Handcuffs",
-				['price_to_customer'] = 1000,
+				['price_to_customer'] = 500,
 				['price_to_customer_min'] = 275,
 				['price_to_customer_max'] = 700,
 				['price_to_export'] = 4500,
