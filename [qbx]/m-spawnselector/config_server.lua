@@ -1,6 +1,6 @@
 SVConfig = {
     Database = "oxmysql", -- oxmysql | ghmattimysql | mysql-async
-    discordToken = "MTM0MDQwNDc4MzUyNTI2OTU5NQ.Gb-gub.kXppqXZ-rHVENEoJldqZdA18l9ZwKtjmLTahKw",
+    discordToken = "MTM0MDQwNDc4MzUyNTI2OTU5NQ.GdJU4k.Klvk5FZ1C5O8oQQHfZ3Q1SnlGKzH_uKiNDnJAY",
     spawnLocations = { -- this locations will be inserting in to sql for the first time and script get the locations from sql after that
         {
             point = "International Airport",
