@@ -1,4 +1,3 @@
-shared_script "@ReaperV4/bypass.lua"
 lua54 "yes" -- needed for Reaper
 
 games {'gta5'}
