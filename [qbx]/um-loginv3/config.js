@@ -10,7 +10,7 @@ const UM = {
         color: '#bb55da', // Todo: https://www.color-hex.com/
         opacity: 1, // 0 close background opacity, | 0.7 low background opacity,
         logo: "assets/images/logo.png",
-        logowidth: 10,
+        logowidth: 9,
         extra: {
             autoRGB: false,
             autoSnow: false,
@@ -32,13 +32,13 @@ const UM = {
                                                 // ? https://cdn.discordapp.com/attachments/627254815252152331/1077573043771166810/video.mp4
             },                                  // ? youtubeVID is recommended instead because the file size is high (100MB)
             youtubeVID: {
-                enabled: false,
-                link: "pYhpKBc2RXrr2Ebt", //? only youtube video id || example: https://www.youtube.com/watch?v=Awgpquzwwz0 | id = Awgpquzwwz0
+                enabled: true,
+                link: "HKKXWx5fsbk", //? only youtube video id || example: https://www.youtube.com/watch?v=Awgpquzwwz0 | id = Awgpquzwwz0
 
                 //? if youtube video dont play check this link https://www.youtube.com/embed/videoid and replace videoid with your video id
                 //? check this in your browser if it is hidden here it will not work
 
-                volume : 0.0, // min: 0.1 | max: 1 | 0 mute
+                volume : 0.1, // min: 0.1 | max: 1 | 0 mute
             },
         },
 
