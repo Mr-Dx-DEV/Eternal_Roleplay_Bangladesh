@@ -1,3 +1,4 @@
+shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 name "Jim-Mechanic"
 author "Jimathy"
 version "3.4.2"

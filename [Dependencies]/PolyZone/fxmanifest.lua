@@ -1,3 +1,4 @@
+shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 games {'gta5'}
 
 fx_version 'cerulean'

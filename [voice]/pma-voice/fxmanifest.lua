@@ -1,3 +1,4 @@
+shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 game 'common'
 
 fx_version 'cerulean'

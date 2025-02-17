@@ -1,3 +1,4 @@
+shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 fx_version 'bodacious'
 
 game 'gta5'
