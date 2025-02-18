@@ -1158,7 +1158,7 @@ Config.market_categories = {
 			-- 	['max_amount_to_purchase'] = 1,
 			-- 	['img'] = 'weapon_revolver.png',
 			-- },
-			['WEAPON_PITVIPER'] = {
+			['weapon_pitviper'] = {
 				['name'] = "JW4 PIT VIPER",
 				['price_to_customer'] = 4500,
 				['price_to_customer_min'] = 900,
@@ -1170,9 +1170,9 @@ Config.market_categories = {
 				['is_weapon'] = true,
 				['requires_license'] = false,
 				['max_amount_to_purchase'] = 1,
-				['img'] = 'WEAPON_PITVIPER.png',
+				['img'] = 'weapon_pitviper.png',
 			},
-			['WEAPON_GLOCK19X'] = {
+			['weapon_glock19x'] = {
 				['name'] = "G19X XL",
 				['price_to_customer'] = 4500,
 				['price_to_customer_min'] = 900,
@@ -1184,7 +1184,7 @@ Config.market_categories = {
 				['is_weapon'] = true,
 				['requires_license'] = false,
 				['max_amount_to_purchase'] = 1,
-				['img'] = 'WEAPON_GLOCK19X.png',
+				['img'] = 'weapon_glock19x.png',
 			},
 			
 			

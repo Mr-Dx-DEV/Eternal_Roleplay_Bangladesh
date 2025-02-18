@@ -3,7 +3,7 @@ Config = Config or {}
 Config.framework = "QBCore"						-- [ESX|QBCore] Your framework
 
 Config.ESX_settings = {							-- (ESX Only) ESX settings
-	['is_updated'] = true,						-- Set to false if your ESX uses the getSharedObject event (usually for ESX versions older than 1.9.0)
+	['is_updated'] = false,						-- Set to false if your ESX uses the getSharedObject event (usually for ESX versions older than 1.9.0)
 	['shared_object'] = "esx:getSharedObject",	-- GetSharedObject event if you set 'is_updated' config to false
 	['esx_version'] = 'weight'					-- [weight|limit] Configure here if your inventory uses weight or limit
 }
@@ -28,7 +28,7 @@ Config.custom_scripts_compatibility = {
 }
 
 Config.notification = {							-- (Only if notification is default)
-	['has_title'] = false,						-- Select if you want the notification to have a title or not
+	['has_title'] = true,						-- Select if you want the notification to have a title or not
 	['position'] = "top-right",					-- [top-left|top-center|top-right|middle-left|middle-right|bottom-left|bottom-center|bottom-right] Position of the notification on the screen
 	['duration'] = 8000,						-- Time (in ms) the notifications will be shown
 }
