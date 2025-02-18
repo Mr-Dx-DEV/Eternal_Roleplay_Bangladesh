@@ -1611,5 +1611,5 @@ Config.FreeModeKeys = {
     for troubleshooting and understanding the inner workings of the system.
 ]]
 
-Config.Debug = true      -- Enable or disable debug mode for general information and troubleshooting.
+Config.Debug = false      -- Enable or disable debug mode for general information and troubleshooting.
 Config.ZoneDebug = false -- Enable or disable debug mode for zone-related actions and details.
