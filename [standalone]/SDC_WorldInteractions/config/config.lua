@@ -4,7 +4,7 @@ SDC = {}
 -------------------------------Important Configs---------------------------------
 ---------------------------------------------------------------------------------
 SDC.Framework = "qb-core" --Either "qb-core" or "esx"
-SDC.Target = "ox-target" --Can be one of these (If "none" is selected it will use TextUi): ["qb-target","ox-target","none"]
+SDC.Target = "qb-target" --Can be one of these (If "none" is selected it will use TextUi): ["qb-target","ox-target","none"]
 SDC.NotificationSystem = "ox_lib" -- ['mythic_old', 'mythic_new', 'tnotify', 'okoknotify', 'ox_lib', 'print', 'framework', 'none'] --Notification system you prefer to use
 SDC.UseProgBar = "ox_lib" --If you want to use a progress bar resource, options: ["progressBars", "mythic_progbar", "ox_lib", "none"]
 
