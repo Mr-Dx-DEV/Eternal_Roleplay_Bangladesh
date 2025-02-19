@@ -1,7 +1,7 @@
 lib.addKeybind({
     name = 'tackle',
     description = 'Tackle',
-    defaultKey = 'E',
+    defaultKey = 'LMENU',
     onReleased = function(self)
         if cache.vehicle then return end
         if QBX.PlayerData.metadata.ishandcuffed then return end
@@ -26,5 +26,5 @@ lib.addKeybind({
 })
 
 RegisterNetEvent('tackle:client:GetTackled', function()
-    SetPedToRagdoll(cache.ped, 7000, 7000, 0, 0, 0, 0)
+    SetPedToRagdoll(cache.ped, math.random(1000, 6000), math.random(1000, 6000), 0, 0, 0, 0)
 end)

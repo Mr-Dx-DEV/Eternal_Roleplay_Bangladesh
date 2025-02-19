@@ -45,7 +45,6 @@ end)
 
 if config.disable.idleCamera then
     DisableIdleCamera(true)
-    DisableVehiclePassengerIdleCamera(true)
 end
 
 local function pistolWhipLoop()

@@ -743,7 +743,7 @@ function Hotwire(vehicle, plate)
                 iconColor = '#C53030'
             })
         end
-    end, 10, 10) -- NumberOfCircles, MS
+    end, 03, 10) -- NumberOfCircles, MS
     SetTimeout(10000, function()
         AttemptPoliceAlert("steal")
         lib.notify({

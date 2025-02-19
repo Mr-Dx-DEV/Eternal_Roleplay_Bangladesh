@@ -27,6 +27,7 @@ return {
         [`halftrack`] = true,
         [`hunter`] = true,
         [`vigilante`] = true,
+        [`policeb`] = true,
         [`akula`] = true,
         [`barrage`] = true,
         [`khanjali`] = true,

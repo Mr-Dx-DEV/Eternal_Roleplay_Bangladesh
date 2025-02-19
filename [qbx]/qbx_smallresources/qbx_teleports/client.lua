@@ -28,7 +28,8 @@ CreateThread(function ()
                     destination = {
                         coords = vec(exit.coords),
                         ignoreGround = exit.ignoreGround,
-                        allowVehicle = entrance.allowVehicle
+                        allowVehicle = entrance.allowVehicle,
+                        job = exit.job
                     }
                 end,
                 onExit = function ()
@@ -41,6 +42,55 @@ CreateThread(function ()
 end)
 
 local keybind
+
+local function getPlayerJob()
+    local playerData = QBX.PlayerData
+    return playerData.job.name
+end
+
+local function canTeleport(destination)
+    -- Validate the destination input
+    if not destination or type(destination) ~= "table" then
+        return false
+    end
+
+    -- Get the player's job
+    local playerJob = getPlayerJob()
+    if not playerJob then
+        return false
+    end
+
+    -- Handle destination.job as a single value or an array
+    local destinationJob = destination.job
+    if type(destinationJob) == "string" then
+        -- Single job restriction
+        return destinationJob == playerJob
+    elseif type(destinationJob) == "userdata" or type(destinationJob) == "table" then
+        -- Attempt to handle as an array of jobs
+        local jobList = {}
+        if type(destinationJob.toTable) == "function" then
+            local success, result = pcall(function() return destinationJob:toTable() end)
+            if success and type(result) == "table" then
+                jobList = result
+            else
+                return false
+            end
+        else
+            jobList = destinationJob
+        end
+
+        -- Check if the player's job is in the allowed jobs list
+        for _, job in ipairs(jobList) do
+            if job == playerJob then
+                return true
+            end
+        end
+        return false
+    else
+        -- No job restriction
+        return true
+    end
+end
 
 local function onPressed()
     keybind:disable(true)
@@ -58,27 +108,31 @@ local function onPressed()
             if isSafe then coordZ = z end
         end
 
-        if destination.allowVehicle and cache.vehicle then
-            SetPedCoordsKeepVehicle(
-                cache.ped,
-                destination.coords.x,
-                destination.coords.y,
-                coordZ
-            )
+        if canTeleport(destination) then
+            if destination.allowVehicle and cache.vehicle then
+                SetPedCoordsKeepVehicle(
+                    cache.ped,
+                    destination.coords.x,
+                    destination.coords.y,
+                    coordZ
+                )
 
-            SetVehicleOnGroundProperly(cache.vehicle)
+                SetVehicleOnGroundProperly(cache.vehicle)
+            else
+                SetEntityCoords(
+                    cache.ped,
+                    destination.coords.x,
+                    destination.coords.y,
+                    coordZ,
+                    true, false, false, false
+                )
+            end
+
+            if type(destination.coords) == 'vector4' then
+                SetEntityHeading(cache.ped, destination.coords.w)
+            end
         else
-            SetEntityCoords(
-                cache.ped,
-                destination.coords.x,
-                destination.coords.y,
-                coordZ,
-                true, false, false, false
-            )
-        end
-
-        if type(destination.coords) == 'vector4' then
-            SetEntityHeading(cache.ped, destination.coords.w)
+            exports.qbx_core:Notify('You do not have the required job to use this teleport', 'error')
         end
     end
     keybind:disable(false)
