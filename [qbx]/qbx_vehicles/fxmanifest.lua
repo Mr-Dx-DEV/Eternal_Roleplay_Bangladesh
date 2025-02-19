@@ -1,9 +1,11 @@
+shared_script '@NukeXDAnti/ai_module_fg-obfuscated.lua'
+shared_script '@NukeXDAnti/shared_fg-obfuscated.lua'
 fx_version 'cerulean'
 game 'gta5'
 
 description 'QBX_Vehicles'
 repository 'https://github.com/Qbox-project/qbx_vehicles'
-version '1.4.2'
+version '1.4.1'
 
 server_scripts {
     '@ox_lib/init.lua',

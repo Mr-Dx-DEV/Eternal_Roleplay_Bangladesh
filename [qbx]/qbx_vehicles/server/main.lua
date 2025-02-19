@@ -1,5 +1,4 @@
 assert(lib.checkDependency('qbx_core', '1.2.0', true))
-lib.versionCheck('Qbox-project/qbx_vehicles')
 
 ---@class ErrorResult
 ---@field code string
