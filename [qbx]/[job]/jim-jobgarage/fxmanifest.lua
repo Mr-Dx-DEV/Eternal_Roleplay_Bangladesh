@@ -1,3 +1,4 @@
+shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 name "Jim-JobGarage"
 author "Jimathy"
 version "1.4.3"
