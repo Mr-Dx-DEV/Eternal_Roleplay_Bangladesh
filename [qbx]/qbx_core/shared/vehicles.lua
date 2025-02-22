@@ -7775,5 +7775,14 @@ return {
         category = 'sportsclassics',
         type = 'automobile',
         hash = `ztype`,
+    },
+    camry55 = {
+        name = 'Toyota Camry',
+        brand = 'Toyota',
+        model = 'camry55',
+        price = 84821,
+        category = 'welcome',
+        type = 'automobile',
+        hash = `camry55`,
     }
 }

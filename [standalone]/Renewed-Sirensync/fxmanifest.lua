@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 fx_version 'cerulean'
 game 'gta5'
 use_experimental_fxv2_oal 'yes'

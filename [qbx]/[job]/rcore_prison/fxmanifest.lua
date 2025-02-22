@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 --[[ FX Information ]]--
 fx_version   'cerulean'
 lua54        'yes'

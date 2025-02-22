@@ -1,13 +1,8 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 shared_script '@FatMan/ai_module_fg-obfuscated.lua'
-
 fx_version 'cerulean'
 games { 'gta5' }
-
 version '1.0.0'
-
 loadscreen 'html/index.html'
-
 files {
     'html/index.html',
     'html/assets/logo.png',
@@ -16,7 +11,6 @@ files {
     'html/assets/bgvideo.mp4',
     'html/assets/music.mp3'
 }
-
 client_scripts {
     'client/client.lua'
 }

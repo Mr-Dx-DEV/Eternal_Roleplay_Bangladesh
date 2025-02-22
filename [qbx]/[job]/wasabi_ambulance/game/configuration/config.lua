@@ -425,7 +425,7 @@ Config.StandaloneCheckIns = {
         RespawnNoBedLocation = { coords = vec3(1729.03, 2563.33, 45.56), heading = 339.02 }, -- Coords and heading of where to spawn player if DisableHospitalBeds is set to true or beds full
         HospitalBeds = {
             --              { coords = vec3(332.62, -587.17, 42.84+0.3), heading = 160.0 },
-            { coords = vec3(317.67, -585.37, 42.84 + 0.3), heading = 160.0 },
+            { coords = vec3(-466.59481811523, -282.77166748047, 35.835079193115 + 0.3), heading = 203.40788269043 },
         }
     },
 

@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 name "Jim-Mining"
 author "Jimathy"
 version "v2.4.3"

@@ -35,9 +35,10 @@ Config.Permissions = {
     -- ["char1:12334"] = "god", -- charid for ESX
 
     ["discord:811436286006657025"] = "god",   --- Mr_Dx
+    ["discord:634095757674414090"] = "god",   --- RDX
 
     ["discord:1015672785265250426"] = "god",   --- Tusar rafi
-    ["discord:1134570924260196502"] = "god",    --- hanzo
+  --  ["discord:1134570924260196502"] = "god",    --- hanzo
     ["discord:1222247506889408572"] = "god",   --- dolar
     ["discord:582939140543348746"] = "god",   --- goku op
     ["discord:674925087400525825"] = "god",   --- walter

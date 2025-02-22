@@ -109,8 +109,8 @@ Config.leftindicator = "LEFT"
 Config.hazardlights = "DOWN"  
 Config.VehicleEngineToggleKey = "G"
 Config.NitroKey = 36 -- Whatever you set Config.EnableRegisterKeyMapping if you want to change key for nitro only reference here https://docs.fivem.net/docs/game-references/controls/
-Config.MouseCursorKey = 246 -- Whatever you set Config.EnableRegisterKeyMapping if you want to change key for cursor only reference here https://docs.fivem.net/docs/game-references/controls/
-Config.MouseCursorKeyLabel = "/"
+Config.MouseCursorKey = 277 -- Whatever you set Config.EnableRegisterKeyMapping if you want to change key for cursor only reference here https://docs.fivem.net/docs/game-references/controls/
+Config.MouseCursorKeyLabel = "["
 
 --[[
     ░██╗░░░░░░░██╗░█████╗░████████╗███████╗██████╗░███╗░░░███╗░█████╗░██████╗░██╗░░██╗

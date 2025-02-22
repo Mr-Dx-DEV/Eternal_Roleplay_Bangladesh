@@ -7,6 +7,26 @@ return {
     interact_dist = 1.5,
 
     elevators = {
+        ['Army'] = {
+            {
+                number = 0, -- floor
+                name = 'Ground Floor', -- or false
+                code = nil, -- restrict floor by password
+                pos = vector3(-2361.02, 3248.77, 32.81),
+            },
+            {
+                number = 1, -- floor
+                name = 'Floor One', -- or false
+                code = nil, -- restrict floor by password
+                pos = vector3(-2360.79, 3249.67, 92.9),
+            },
+            {
+                number = 2, -- floor
+                name = 'Roof', -- or false
+                code = nil, -- restrict floor by password
+                pos = vector3(-2359.79, 3252.66, 98.58),
+            },
+        },
         ['Life Invader'] = {
             {
                 number = 0, -- floor

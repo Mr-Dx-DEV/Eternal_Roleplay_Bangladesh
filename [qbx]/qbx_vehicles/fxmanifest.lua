@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 shared_script '@NukeXDAnti/ai_module_fg-obfuscated.lua'
 shared_script '@NukeXDAnti/shared_fg-obfuscated.lua'
 fx_version 'cerulean'

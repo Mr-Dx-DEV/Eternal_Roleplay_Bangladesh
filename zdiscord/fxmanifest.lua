@@ -1,4 +1,3 @@
-shared_script '@Dx_FiveM/shared_fg-obfuscated.lua'
 --[[
  - This file is part of zdiscord.
  - Copyright (C) 2021 Tony/zfbx

@@ -7,6 +7,24 @@ return {
     ---@alias GroupName string
     ---@type table<GroupName, ZoneInfo>
     menus = {
+        army = {
+            coords = vec3(-2356.51, 3251.08, 101.45),
+            size = vec3(1.5, 1.5, 1.5),
+            rotation = 39.68,
+            type = 'job',
+        },
+        ambulance = {
+            coords = vec3(-455.88, -302.63, 34.91),
+            size = vec3(1.5, 1.5, 1.5),
+            rotation = 39.68,
+            type = 'job',
+        },
+        police = {
+            coords = vec3(462.07, -985.61, 30.73),
+            size = vec3(1.5, 1.5, 1.5),
+            rotation = 39.68,
+            type = 'job',
+        },
         lostmc = {
             coords = vec3(983.69, -90.92, 74.85),
             size = vec3(1.5, 1.5, 1.5),

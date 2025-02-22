@@ -19,58 +19,66 @@ return {
         offDutyPay = false,
         grades = {
             [0] = {
+                name = 'Detective Branch',
+                payment = 800
+            },
+            [1] = {
                 name = 'Constable of Police',
                 payment = 400
             },
-            [1] = {
+            [2] = {
                 name = 'Nayek of Police',
                 payment = 450
             },
-            [2] = {
+            [3] = {
                 name = 'Assistant Sub-Inspector of Police',
                 payment = 500
             },
-            [3] = {
+            [4] = {
                 name = 'Sergeant of Police',
                 payment = 550
             },
-            [4] = {
+            [5] = {
                 name = 'Sub-Inspector of Police',
                 payment = 600
             },
- 	        [5] = {
+ 	        [6] = {
                 name = 'Inspector of Police',
                 payment = 650
             },
-            [6] = {
+            [7] = {
                 name = 'Assistant Superintendent of Police',
                 payment = 700
             },
-            [7] = {
+            [8] = {
                 name = 'Senior Assistant Superintendent of Police',
                 payment = 750
             },
-            [8] = {
+            [9] = {
                 name = 'Additional Superintendent of Police',
                 payment = 800
             },
-            [9] = {
+            [10] = {
                 name = 'Superintendent of Police',
                 payment = 850
             },
-	        [10] = {
+	        [11] = {
                 name = 'Additional Deputy Inspector General of Police',
                 payment = 900
             },
-	        [11] = {
+	        [12] = {
                 name = 'Deputy Inspector General of Police',
+                isboss = true,
+                bankAuth = true,
                 payment = 950 
             },
-	        [12] = {
+	        [13] = {
                 name = 'Additional Inspector Genaral of Police',
+                isboss = true,
+                bankAuth = true,
                 payment = 1000
             },
-	        [13] = {
+	        [14] = {
                 name = 'Inspector General of Police',
                 isboss = true,
                 bankAuth = true,

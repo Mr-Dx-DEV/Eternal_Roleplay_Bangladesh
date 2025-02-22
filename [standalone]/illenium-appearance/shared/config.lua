@@ -191,6 +191,32 @@ Config.Stores = {
         }
     },
     {
+        type = "clothing",          ----- MRPD
+        coords = vector4(461.23, -998.07, 30.98, 140.88),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        points = {
+            vector3(456.81, -995.51, 30.69),
+            vector3(456.23, -1000.01, 30.69),
+            vector3(464.84, -1000.53, 30.72),
+            vector3(463.98, -995.23, 31.24)
+        }
+    },
+    {
+        type = "clothing",          ----- Army
+        coords = vector4(-2357.09, 3256.11, 32.81, 183.33),
+        size = vector3(4, 4, 4),
+        rotation = 45,
+        usePoly = false,
+        points = {
+            vector3(-2357.61, 3257.78, 33.05),
+            vector3(-2354.62, 3256.05, 32.81),
+            vector3(-2359.89, 3253.83, 33.05),
+            vector3(-2355.71, 3252.27, 32.81)
+        }
+    },
+    {
         type = "clothing",
         coords = vector4(-705.5, -149.22, 37.42, 122),
         size = vector3(4, 4, 4),

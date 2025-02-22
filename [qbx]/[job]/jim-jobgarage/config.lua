@@ -363,7 +363,76 @@ Config = {
 				}
 			},
 		},
-
+		{    zoneEnable = true, -- disable if you want to hide this temporarily
+			job = "army", -- set this to required job grade
+			garage = {
+				spawn = vector4(-2202.48, 3163.62, 32.81, 329.44),  -- Where the vehicle will spawn
+				out = vector4(-2184.63, 3173.38, 32.81, 139.75),  -- Where you select the vehicles from
+				list = {  -- The list of cars that will spawn
+					["valkyrie"] = {
+						CustomName = "Army Heli",
+						livery = 1,
+						extras = { 1, 2, 3, 4, 5, 6, 7, 8 },
+						performance = "max",
+					}
+				},
+			},
+		},
+		{    zoneEnable = true, -- disable if you want to hide this temporarily
+		job = "army", -- set this to required job grade
+		garage = {
+			spawn = vector4(-2345.02, 3246.02, 32.83, 327.75),  -- Where the vehicle will spawn
+			out = vector4(-2349.03, 3244.91, 32.83, 242.6),  -- Where you select the vehicles from
+			list = {
+				
+				["crusader"] = {
+					CustomName = "Canis crusader",
+					livery = 1,
+					extras = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+					performance = "max",
+					
+				},
+				["barracks"] = {
+					CustomName = "barracks",
+					livery = 1,
+					extras = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+					performance = "max",
+					
+				},
+				["barracks2"] = {
+					CustomName = "barracks2",
+					livery = 1,
+					extras = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+					performance = "max",
+					
+				},
+				["barracks3"] = {
+					CustomName = "barracks3",
+					livery = 1,
+					extras = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+					performance = "max",
+					
+				},
+				["barrage"] = {
+					CustomName = "barrage",
+					livery = 1,
+					extras = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+					performance = "max",
+					
+				},
+				
+				["baller5"] = {
+					CustomName = "baller 5",
+					livery = 1,
+					extras = { 1, 2, 3, 4, 5, 6, 7, 8, 9, 10, 11, 12 },
+					performance = "max",
+					
+				}
+				
+				
+			}
+		},
+	},
 
 
 

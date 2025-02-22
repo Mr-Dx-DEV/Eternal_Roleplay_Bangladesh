@@ -69,7 +69,7 @@ Config.Keys = {
 }
 
 Config.UniqueGarages = true --Do you want to only be able to get your car from the garage you last put it in?
-Config.SaveAdvancedVehicleDamage = true --Do you want to save poped tyres, broken doors and broken windows and re-apply them all when spawning a vehicle?
+Config.SaveAdvancedVehicleDamage = false --Do you want to save poped tyres, broken doors and broken windows and re-apply them all when spawning a vehicle?
 Config.UseExploitProtection = false --Do you want to enable the cheat engine protection to check the vehicle hashes when a vehicle is stored?
 Config.ResetGarageState = true --Do you want the in_garage state of all vehicles to be reset when the script starts/restarts?
 
@@ -124,7 +124,7 @@ Config.Impound = {
     Authorized_Jobs = { --Only jobs inside this table can impound vehicles or unimpound vehicles.
         ['police'] = true,
         ['ambulance'] = true,
-        ['fire'] = true,
+        ['army'] = true,
         ['bcso'] = true,
         ['sasp'] = true,
         ['fib'] = true,
@@ -645,11 +645,11 @@ Config.Locations = {
         Garage_ID = 'A', --The very first car garage's `garage_id` must be the same as the default value of the `garage_id` in the database as when a vehicle is purchased it gets sent to this garage. You can change the garage id's to what ever you like but make sure to also change the default garage_id in the database.
         Type = 'car', --The type of vehicles which use this garage. ('car'/'boat'/'air').
         Dist = 15, --The distance that you can use this garage.
-        x_1 = 225.21, y_1 = -786.78, z_1 = 30.73, --This is the location of the garage, where you press e to open for example.
+        x_1 = 218.3, y_1 = -796.69, z_1 = 30.77, --This is the location of the garage, where you press e to open for example.
         EventName1 = 'cd_garage:QuickChoose', --DONT CHANGE THIS.
         EventName2 = 'cd_garage:EnterGarage', --DONT CHANGE THIS.
         Name = UIText, --You dont need to change this.
-        x_2 = 225.21, y_2 = -786.78, z_2 = 30.73, h_2 = 154.06, --This is the location where the vehicle spawns.
+        x_2 = 218.3, y_2 = -796.69, z_2 = 30.77, h_2 = 72.83, --This is the location where the vehicle spawns.
         EnableBlip = true, --If disabled, this garage blip will not show on the map.
         JobRestricted = nil, --This will allow only players with certain jobs to use this. This is not a job garage, its still a normal garage. (SINGLE JOB EXAMPLE:  JobRestricted = {'police'},  MULTIPLE JOBS EXAMPLE:  JobRestricted = {'police', 'ambulance'}, )
         ShellType = '10cargarage_shell', --[ '10cargarage_shell' / '40cargarage_shell' / nil ] --You can choose the shell which is loaded when you enter the inside garage from this location. If you set it to nil the script will load a shell based on the amount of cars you own.

@@ -56,13 +56,13 @@ Config = {
 		craftCam = false,
 		MultiCraft = false,
 		MultiCraftAmounts = { [1], [2], [3], [4], [5], [6], [7], [8], [9], [10] },
-		showItemBox = true,			-- toggle itemBox for adding/removing items, helpful if using custom item change events
+		showItemBox = false,			-- toggle itemBox for adding/removing items, helpful if using custom item change events
 	},
 
 	Harness = {
-		JobOnly = false,			-- Only allow job roles to add a Harness to vehicle
+		JobOnly = true,			-- Only allow job roles to add a Harness to vehicle
 		HarnessControl = true,		-- Enable harness AND seatbelt features of the script, requires edits to smallresources and hud scripts
-		seatbeltEasyLeave = false,	-- if true players can exit vehicled before removing seatbelt
+		seatbeltEasyLeave = true,	-- if true players can exit vehicled before removing seatbelt
 		harnessEasyLeave = true,	-- if true players can exit vehicled before removing harness
 
 		progOn = true,				-- if true add a progressBar to buckle harness
@@ -71,10 +71,10 @@ Config = {
 		seatbeltNotify = false,		-- if true, show a notification when seatbelt is put on or off
 
 		timeOn = 3000,				-- Time for the progress bar to put on harness
-		timeOff = 2000,				-- Time for the progress bar to take off harness
+		timeOff = 500,				-- Time for the progress bar to take off harness
 
 		minimumSpeed = 70,			-- Minimum speed for crash logic to be triggered
-		minimumSeatBeltSpeed = 1100, -- Minimuim speed for ejecting with a seatbelt attached
+		minimumSeatBeltSpeed = 110, -- Minimuim speed for ejecting with a seatbelt attached
 		minimumDamage = 15.0, 		-- Minimum body damage for ejecting a player (default 15 = .15%)
 
 		crashKill = false,			-- Set to true if you want ejecting when crashing to kill/injure
@@ -92,7 +92,7 @@ Config = {
 	vehFailure = { 						-- Enabling these will make allow you to no longer need qb-vehiclefailure
 										-- ONLY ENABLE IF NOT USING VEHICLEFAILURE OR ANOTHER SCRIPT TO REPLACE IT
 		damages = true,					-- Makes jim-mechanic automatically handle extra damages instead of needing an edit to vehfailure
-		repairKits = false,				-- Takes control of repairkit and advancedrepairkit
+		repairKits = true,				-- Takes control of repairkit and advancedrepairkit
 		fixCommand = true,				-- takes control of /fix command
 		PreventRoll = true,			-- takes control of preventing rolling your car back over when upside down
 		increaseEngDamage = true,		-- enabling this adds extra damage based on what the body damage has just taken
@@ -136,7 +136,7 @@ Config = {
 	},
 
 	Repairs = {	--Repair Related
-		FreeRepair = false,  		-- Are repairs free? True means yes
+		FreeRepair = true,  		-- Are repairs free? True means yes
 		StashRepair = true, 		-- Enable for repair materials to be removed from a job stash (disabled if RequiresJob = false)
 
 		ExtraDamages = true,		-- When enabled, it will use the built in extra damage systems (Like qb-mechanicjobs functions)
@@ -188,7 +188,7 @@ Config = {
 	StoreCraft = {
 		Crafting = false, 				-- Set true to turn on crafting features
 		StashCraft = false,  			-- Set true to grab materials from mechaincs stash for crafting
-		Stores = true, 					-- Set true to turn on shop store features
+		Stores = false, 					-- Set true to turn on shop store features
 	},
 
 	Odometer = {
@@ -205,24 +205,24 @@ Config = {
 		showSpeedometer = false,
 
 		OdoIconsToShow = {
-			["engine"] = true,
-			["body"] = true,
-			["oil"] = true,
-			["spark"] = true,
-			["fuel"] = true,
-			["axle"] = true,
-			["battery"] = true,
-			["wheel"] = true,
-			["headlight"] = true,
-			["seatbelt"] = true,
-			["harness"] = true,
-			["underglow"] = true,
-			["doors"] = true,
-			["manual"] = true,
-			["antilag"] = true,
-			["mileage"] = true,
-			["lowfuel"] = true,
-			["nos"] = true,
+			["engine"] = false,
+			["body"] = false,
+			["oil"] = false,
+			["spark"] = false,
+			["fuel"] = false,
+			["axle"] = false,
+			["battery"] = false,
+			["wheel"] = false,
+			["headlight"] = false,
+			["seatbelt"] = false,
+			["harness"] = false,
+			["underglow"] = false,
+			["doors"] = false,
+			["manual"] = false,
+			["antilag"] = false,
+			["mileage"] = false,
+			["lowfuel"] = false,
+			["nos"] = false,
 		},
 
 		odoCustomisation = {
@@ -348,6 +348,7 @@ Config = {
 		LockEmergency = false,  -- Enable this to lock make only "Emergency" (Class 18) vehicles to be used with the bench
 		Locations = {
 			{ coords = vec4(451.05, -973.19, 25.7, 180.0), prop = true, }, -- MRPD UNDERGROUND PARKING
+			{ coords = vec4(-2329.08, 3248.75, 33.04, 333.16), prop = true, }, -- MRPD UNDERGROUND PARKING
 			{ coords = vec4(342.51, -570.98, 28.8, 70.0), prop = true, }, -- PILL BOX GARAGE
 			{ coords = vec4(-1163.01, -2009.41, 13.18, 117.71), prop = true },
 		},
