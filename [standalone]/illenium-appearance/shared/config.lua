@@ -196,6 +196,7 @@ Config.Stores = {
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
+        showBlip = false, 
         points = {
             vector3(456.81, -995.51, 30.69),
             vector3(456.23, -1000.01, 30.69),
@@ -209,6 +210,7 @@ Config.Stores = {
         size = vector3(4, 4, 4),
         rotation = 45,
         usePoly = false,
+        showBlip = false, 
         points = {
             vector3(-2357.61, 3257.78, 33.05),
             vector3(-2354.62, 3256.05, 32.81),
