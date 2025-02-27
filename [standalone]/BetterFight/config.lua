@@ -219,8 +219,32 @@ Config.Weapons= {
     [115] = { hash = `WEAPON_GLOCK40S`, recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.40},
     [116] = { hash = `WEAPON_GLOCK40`, recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.42},
     [117] = { hash = `WEAPON_GLOCK19`, recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.38},
-    [118] = { hash = `WEAPON_GLOCK19X`, recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.39}
+    [118] = { hash = `WEAPON_GLOCK19X`, recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.39},
     
-
+    [119] = { hash = `WEAPON_ARP`,       recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.30 },
+    [120] = { hash = `WEAPON_FIVE7`,     recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.33 },
+    [121] = { hash = `WEAPON_GLOCK17`,   recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.36 },
+    [122] = { hash = `WEAPON_GLOCK19`,   recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.39 },
+    [123] = { hash = `WEAPON_GLOCK18C`,  recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.42 },
+    [124] = { hash = `WEAPON_GLOCK22`,   recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.45 },
+    [125] = { hash = `WEAPON_GLOCKC`,    recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.48 },
+    [126] = { hash = `WEAPON_M45A1`,     recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.51 },
+    [127] = { hash = `WEAPON_RENETTI`,   recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.54 },
+    [128] = { hash = `WEAPON_TEC9`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.57 },
+    [129] = { hash = `WEAPON_SP320`,     recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.60 },
+    [130] = { hash = `WEAPON_RM4A1`,     recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.30 },
+    [131] = { hash = `WEAPON_M4N`,       recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.33 },
+    [132] = { hash = `WEAPON_GM4`,       recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.36 },
+    [133] = { hash = `WEAPON_HM4C`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.39 },
+    [134] = { hash = `WEAPON_AK63`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.42 },
+    [135] = { hash = `WEAPON_M4A1`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.45 },
+    [136] = { hash = `WEAPON_1911`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.48 },
+    [137] = { hash = `WEAPON_SW675`,     recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.51 },
+    [138] = { hash = `WEAPON_DEAGLE`,    recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.54 },
+    [139] = { hash = `WEAPON_DRACO`,     recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.57 },
+    [140] = { hash = `WEAPON_M680`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.60 },
+    [141] = { hash = `WEAPON_P90C`,      recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.30 },
+    [142] = { hash = `WEAPON_VECTOR`,    recoil = 0.50, rightLeftRecoil = 0.45, vehicleRecoil = 0.60, vehicleRightLeftRecoil = 1.00, gripMultiplier = 0.89, suppressorMultiplier = 0.84, damageMultiplier = 0.33 }
+    
 
 }
