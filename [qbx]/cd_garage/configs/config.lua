@@ -843,7 +843,7 @@ Config.ImpoundLocations = { --DO NOT CHANGE THE TABLE IDENTIFIERSs, for example 
         coords = {x = 401.28, y = -1631.44, z = 29.29}, --This is the location of the garage, where you press e to open for example.
         spawnpoint = {x = 404.66, y = -1642.03, z = 29.29, h = 225.5}, --This is the location where the vehicle spawns.
         blip = {
-            sprite = 357, --Icon of the blip.
+            sprite = 68, --Icon of the blip.
             scale = 0.4, --Size of the blip.
             colour = 3, --Colour of the blip.
             name = L('car_city_impound'), --This can be changed in the Locales.
