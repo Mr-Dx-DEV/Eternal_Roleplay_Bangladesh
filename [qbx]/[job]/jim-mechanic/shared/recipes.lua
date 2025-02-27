@@ -138,12 +138,12 @@ Crafting = {
 			{ ["suspension5"] = { ["steel"] = 1, },
 				["amount"] = 1,
 			},
-			{ ["bprooftires"] = { ["rubber"] = 1, },
-				["amount"] = 1,
-			},
-			{ ["drifttires"] = { ["rubber"] = 1, },
-				["amount"] = 1,
-			},
+			-- { ["bprooftires"] = { ["rubber"] = 1, },
+			-- 	["amount"] = 1,
+			-- },
+			-- { ["drifttires"] = { ["rubber"] = 1, },
+			-- 	["amount"] = 1,
+			-- },
 
 			{ ["oilp1"] = { ["steel"] = 1, },
 				["amount"] = 1,
@@ -314,8 +314,8 @@ Stores = {
 			{ name = "suspension3", price = 100, amount = 50, info = {}, type = "item", },
 			{ name = "suspension4", price = 100, amount = 50, info = {}, type = "item", },
 			{ name = "suspension5", price = 100, amount = 50, info = {}, type = "item", },
-		--	{ name = "bprooftires", price = 100, amount = 50, info = {}, type = "item", },
-		--	{ name = "drifttires", price = 100, amount = 50, info = {}, type = "item", },
+			--{ name = "bprooftires", price = 100, amount = 50, info = {}, type = "item", },
+			--{ name = "drifttires", price = 100, amount = 50, info = {}, type = "item", },
 
 			{ name = "oilp1", price = 100, amount = 50, info = {}, type = "item", },
 			{ name = "oilp2", price = 100, amount = 50, info = {}, type = "item", },
@@ -425,12 +425,12 @@ MaterialRecieve = {
 	suspension5 = {
 		steel = 1,
 	},
-	bprooftires = {
-		rubber = 1,
-	},
-	drifttires = {
-		rubber = 1,
-	},
+	-- bprooftires = {
+	-- 	rubber = 1,
+	-- },
+	-- drifttires = {
+	-- 	rubber = 1,
+	-- },
 	oilp1 = {
 		steel = 1,
 	},

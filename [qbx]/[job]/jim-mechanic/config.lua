@@ -56,7 +56,7 @@ Config = {
 		craftCam = false,
 		MultiCraft = false,
 		MultiCraftAmounts = { [1], [2], [3], [4], [5], [6], [7], [8], [9], [10] },
-		showItemBox = false,			-- toggle itemBox for adding/removing items, helpful if using custom item change events
+		showItemBox = true,			-- toggle itemBox for adding/removing items, helpful if using custom item change events
 	},
 
 	Harness = {
@@ -71,7 +71,7 @@ Config = {
 		seatbeltNotify = false,		-- if true, show a notification when seatbelt is put on or off
 
 		timeOn = 3000,				-- Time for the progress bar to put on harness
-		timeOff = 500,				-- Time for the progress bar to take off harness
+		timeOff = 2000,				-- Time for the progress bar to take off harness
 
 		minimumSpeed = 70,			-- Minimum speed for crash logic to be triggered
 		minimumSeatBeltSpeed = 110, -- Minimuim speed for ejecting with a seatbelt attached
@@ -188,7 +188,7 @@ Config = {
 	StoreCraft = {
 		Crafting = false, 				-- Set true to turn on crafting features
 		StashCraft = false,  			-- Set true to grab materials from mechaincs stash for crafting
-		Stores = false, 					-- Set true to turn on shop store features
+		Stores = true, 					-- Set true to turn on shop store features
 	},
 
 	Odometer = {
@@ -348,7 +348,7 @@ Config = {
 		LockEmergency = false,  -- Enable this to lock make only "Emergency" (Class 18) vehicles to be used with the bench
 		Locations = {
 			{ coords = vec4(451.05, -973.19, 25.7, 180.0), prop = true, }, -- MRPD UNDERGROUND PARKING
-			{ coords = vec4(-2329.08, 3248.75, 33.04, 333.16), prop = true, }, -- MRPD UNDERGROUND PARKING
+			{ coords = vec4(-2329.08, 3248.75, 33.04, 333.16), prop = true, }, -- ARMY
 			{ coords = vec4(342.51, -570.98, 28.8, 70.0), prop = true, }, -- PILL BOX GARAGE
 			{ coords = vec4(-1163.01, -2009.41, 13.18, 117.71), prop = true },
 		},

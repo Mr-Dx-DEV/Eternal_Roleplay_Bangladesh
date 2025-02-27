@@ -14,8 +14,8 @@ shared_scripts {
 
     -- Required core scripts
     '@ox_lib/init.lua',
-   -- '@ox_core/imports/client.lua',
-   -- '@es_extended/imports.lua',
+    '@ox_core/imports/client.lua',
+    '@es_extended/imports.lua',
     '@qbx_core/modules/playerdata.lua',
 
     --Jim Bridge
