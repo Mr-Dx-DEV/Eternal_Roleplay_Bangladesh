@@ -1,5 +1,187 @@
 return {
 	Weapons = {
+
+		['WEAPON_ARP'] = {
+            label = 'ARP',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_FIVE7'] = {
+            label = 'Five-7',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-45'
+        },
+
+        ['WEAPON_GLOCK17'] = {
+            label = 'GLOCK-17',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-45'
+        },
+
+        ['WEAPON_GLOCK18C'] = {
+            label = 'GLOCK-18C',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_GLOCK19'] = {
+            label = 'GLOCK-19',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_GLOCK22'] = {
+            label = 'GLOCK-22',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_GLOCKC'] = {
+            label = 'GLOCK-C',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_M45A1'] = {
+            label = 'M45A1',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-45'
+        },
+
+        ['WEAPON_RENETTI'] = {
+            label = 'RENETTI',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_TEC9'] = {
+            label = 'TEC-9',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_SP320'] = {
+            label = 'SP320',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-9'
+        },
+
+        ['WEAPON_WDB'] = {
+			label = 'WDB',
+			weight = 1,
+			durability = 0.1,
+		},
+
+        ['WEAPON_SOG'] = {
+			label = 'SOG',
+			weight = 1,
+			durability = 0.1,
+		},
+
+        ['WEAPON_RM4A1'] = {
+            label = 'RM4A1',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle'
+        },
+
+        ['WEAPON_M4N'] = {
+            label = 'M4N',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle'
+        },
+
+        ['WEAPON_GM4'] = {
+            label = 'GM4',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle'
+        },
+
+        ['WEAPON_HM4C'] = {
+            label = 'HM4C',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle'
+        },
+
+        ['WEAPON_AK63'] = {
+            label = 'AK63',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle2'
+        },
+
+        ['WEAPON_M4A1'] = {
+            label = 'M4A1',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle'
+        },
+
+        ['WEAPON_1911'] = {
+            label = '1911',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-45'
+        },
+
+        ['WEAPON_SW675'] = {
+            label = 'SW675',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-38'
+        },
+
+        ['WEAPON_DEAGLE'] = {
+            label = 'DEAGLE',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-50'
+        },
+
+        ['WEAPON_DRACO'] = {
+            label = 'DRACO',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-rifle2'
+        },
+
+        ['WEAPON_M680'] = {
+            label = 'M680',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-shotgun'
+        },
+
+        ['WEAPON_P90C'] = {
+            label = 'P90C',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-45'
+        },
+
+        ['WEAPON_VECTOR'] = {
+            label = 'VECTOR',
+            weight = 1,
+            durability = 0.1,
+            ammoname = 'ammo-45'
+        },
+
+
 		--Kyros Weapon Pack V4
 		['WEAPON_GLOCK19X'] = {
             label = 'G19X XL',
