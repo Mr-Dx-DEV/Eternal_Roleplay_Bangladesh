@@ -45,7 +45,7 @@ return {
         [`scarab3`] = true,
         [`rrocket`] = true,
         [`ruiner2`] = true,
-        [`deluxo`] = true,
+      --  [`deluxo`] = false,
         [`s_m_y_ranger_01`] = true,
         [`s_m_y_sheriff_01`] = true,
         [`s_m_y_cop_01`] = true,
