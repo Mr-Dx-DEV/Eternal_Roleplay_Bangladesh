@@ -1,0 +1,1 @@
+DisableIdleCamera(true)
